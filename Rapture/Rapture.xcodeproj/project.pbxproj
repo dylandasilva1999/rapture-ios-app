@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001B552835857155C9E31AE4 /* Pods_Rapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -22,6 +23,9 @@
 		5798A95526FB829D00337D7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5798A95726FB829D00337D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5798A95D26FB86B900337D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EAE4F06757ADD61CE52D221 /* Pods-Rapture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapture.debug.xcconfig"; path = "Target Support Files/Pods-Rapture/Pods-Rapture.debug.xcconfig"; sourceTree = "<group>"; };
+		ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C929479D618B360CAA2E7059 /* Pods-Rapture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapture.release.xcconfig"; path = "Target Support Files/Pods-Rapture/Pods-Rapture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001B552835857155C9E31AE4 /* Pods_Rapture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271F30A86734DA766683CC9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EAE4F06757ADD61CE52D221 /* Pods-Rapture.debug.xcconfig */,
+				C929479D618B360CAA2E7059 /* Pods-Rapture.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4452C0953B0806DA09B6F8A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5798A94226FB829C00337D7F = {
 			isa = PBXGroup;
 			children = (
 				5798A94D26FB829C00337D7F /* Rapture */,
 				5798A94C26FB829C00337D7F /* Products */,
+				271F30A86734DA766683CC9F /* Pods */,
+				4452C0953B0806DA09B6F8A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5798A95A26FB829D00337D7F /* Build configuration list for PBXNativeTarget "Rapture" */;
 			buildPhases = (
+				81E175D18B5ABE756CD754F6 /* [CP] Check Pods Manifest.lock */,
 				5798A94726FB829C00337D7F /* Sources */,
 				5798A94826FB829C00337D7F /* Frameworks */,
 				5798A94926FB829C00337D7F /* Resources */,
+				877CC4B17CB132BF685E2EFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81E175D18B5ABE756CD754F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rapture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877CC4B17CB132BF685E2EFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rapture/Pods-Rapture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rapture/Pods-Rapture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rapture/Pods-Rapture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5798A94726FB829C00337D7F /* Sources */ = {
@@ -268,6 +337,7 @@
 		};
 		5798A95B26FB829D00337D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EAE4F06757ADD61CE52D221 /* Pods-Rapture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +359,7 @@
 		};
 		5798A95C26FB829D00337D7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C929479D618B360CAA2E7059 /* Pods-Rapture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
