@@ -1,13 +1,13 @@
 <!-- PROJECT LOGO -->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/dylandasilva1999/plantly-ios-app?color=%23DE0E30)
-![GitHub watchers](https://img.shields.io/github/watchers/dylandasilva1999/plantly-ios-app?color=%23DE0E30)
-![GitHub language count](https://img.shields.io/github/languages/count/dylandasilva1999/plantly-ios-app?color=%23DE0E30)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dylandasilva1999/plantly-ios-app?color=%23DE0E30)
+![GitHub repo size](https://img.shields.io/github/repo-size/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
+![GitHub watchers](https://img.shields.io/github/watchers/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
+![GitHub language count](https://img.shields.io/github/languages/count/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<h6 align="center">Dylan da Silva iOS 303</h6>
+<h6 align="center">Dylan da Silva iOS 304</h6>
 <p align="center">
 </br>
    
