@@ -16,6 +16,8 @@
 		57CC0FC12704F18100D853CC /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57CC0FBE2704F18000D853CC /* Gilroy-Regular.ttf */; };
 		57CC0FC22704F18100D853CC /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57CC0FBF2704F18100D853CC /* Gilroy-Light.ttf */; };
 		57CC0FC32704F18100D853CC /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57CC0FC02704F18100D853CC /* Gilroy-Bold.ttf */; };
+		57CC0FC72704F26100D853CC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC0FC62704F26100D853CC /* Home.swift */; };
+		57CC0FCA2704F39000D853CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC0FC92704F39000D853CC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		57CC0FBE2704F18000D853CC /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		57CC0FBF2704F18100D853CC /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		57CC0FC02704F18100D853CC /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		57CC0FC62704F26100D853CC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		57CC0FC92704F39000D853CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EAE4F06757ADD61CE52D221 /* Pods-Rapture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapture.debug.xcconfig"; path = "Target Support Files/Pods-Rapture/Pods-Rapture.debug.xcconfig"; sourceTree = "<group>"; };
 		ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C929479D618B360CAA2E7059 /* Pods-Rapture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapture.release.xcconfig"; path = "Target Support Files/Pods-Rapture/Pods-Rapture.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +88,9 @@
 		5798A94D26FB829C00337D7F /* Rapture */ = {
 			isa = PBXGroup;
 			children = (
+				57CC0FC82704F38200D853CC /* Launch */,
+				57CC0FC52704F24800D853CC /* Model */,
+				57CC0FC42704F22D00D853CC /* View */,
 				57CC0FBD2704F07300D853CC /* Fonts */,
 				5798A95D26FB86B900337D7F /* GoogleService-Info.plist */,
 				5798A94E26FB829C00337D7F /* RaptureApp.swift */,
@@ -111,6 +118,29 @@
 				57CC0FBE2704F18000D853CC /* Gilroy-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		57CC0FC42704F22D00D853CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57CC0FC62704F26100D853CC /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57CC0FC52704F24800D853CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57CC0FC82704F38200D853CC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				57CC0FC92704F39000D853CC /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +206,7 @@
 				5798A95326FB829D00337D7F /* Assets.xcassets in Resources */,
 				5798A95E26FB86B900337D7F /* GoogleService-Info.plist in Resources */,
 				57CC0FC32704F18100D853CC /* Gilroy-Bold.ttf in Resources */,
+				57CC0FCA2704F39000D853CC /* LaunchScreen.storyboard in Resources */,
 				57CC0FC22704F18100D853CC /* Gilroy-Light.ttf in Resources */,
 				57CC0FC12704F18100D853CC /* Gilroy-Regular.ttf in Resources */,
 			);
@@ -231,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5798A95126FB829C00337D7F /* ContentView.swift in Sources */,
+				57CC0FC72704F26100D853CC /* Home.swift in Sources */,
 				5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
