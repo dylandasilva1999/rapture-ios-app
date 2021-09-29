@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("currentPageIndex") var currentPageIndex = 1
+    
     var body: some View {
-        Text("Hello, world!")
-            .font(Font.custom("Gilroy-Bold", size: 25))
+        GeometryReader { proxy in
+            let size = proxy.size
+            
+            if(currentPageIndex > 2) {
+                SignInView()
+            } else {
+                OnboardingView(screenSize: size)
+                    .background(Color("Background"))
+            }
+            
+        }
     }
 }
 
