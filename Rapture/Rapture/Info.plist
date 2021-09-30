@@ -22,6 +22,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Gilroy-SemiBold.ttf</string>
 		<string>Gilroy-Bold.ttf</string>
 		<string>Gilroy-Regular.ttf</string>
 		<string>Gilroy-Light.ttf</string>

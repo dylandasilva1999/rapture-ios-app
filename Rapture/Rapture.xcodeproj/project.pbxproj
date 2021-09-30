@@ -10,6 +10,7 @@
 		001B552835857155C9E31AE4 /* Pods_Rapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */; };
 		5742350227051B3A00BA2B23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742350127051B3A00BA2B23 /* HomeView.swift */; };
 		57423506270526FA00BA2B23 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423505270526FA00BA2B23 /* SignInView.swift */; };
+		575E8FDE2706211200C2D05A /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		5742350127051B3A00BA2B23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		57423505270526FA00BA2B23 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		5798A94B26FB829C00337D7F /* Rapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5798A94E26FB829C00337D7F /* RaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaptureApp.swift; sourceTree = "<group>"; };
 		5798A95026FB829C00337D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		57CC0FBD2704F07300D853CC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */,
 				57CC0FC02704F18100D853CC /* Gilroy-Bold.ttf */,
 				57CC0FBF2704F18100D853CC /* Gilroy-Light.ttf */,
 				57CC0FBE2704F18000D853CC /* Gilroy-Regular.ttf */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5798A95626FB829D00337D7F /* Preview Assets.xcassets in Resources */,
+				575E8FDE2706211200C2D05A /* Gilroy-SemiBold.ttf in Resources */,
 				5798A95326FB829D00337D7F /* Assets.xcassets in Resources */,
 				5798A95E26FB86B900337D7F /* GoogleService-Info.plist in Resources */,
 				57CC0FC32704F18100D853CC /* Gilroy-Bold.ttf in Resources */,
@@ -442,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rapture/Preview Content\"";
+				DEVELOPMENT_TEAM = NY29KDUYP3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rapture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -464,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rapture/Preview Content\"";
+				DEVELOPMENT_TEAM = NY29KDUYP3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rapture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
