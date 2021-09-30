@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State var retypePassword = ""
     @State var visible = false
     @State var retypeVisible = false
+    @Binding var show: Bool
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -28,7 +29,7 @@ struct SignUpView: View {
                     HStack {
                         //Register button
                         Button(action: {
-                            
+                            self.show.toggle()
                         }) {
                             Image(systemName: "chevron.left")
                                 .font(.title)
@@ -149,11 +150,17 @@ struct SignUpView: View {
                 .padding(.horizontal, 30)
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
+    
+    @State static private var show = true
+    
     static var previews: some View {
-        SignUpView()
+        SignUpView(show: $show)
     }
 }

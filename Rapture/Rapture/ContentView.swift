@@ -10,18 +10,33 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("currentPageIndex") var currentPageIndex = 1
+    @State var show = false
     
     var body: some View {
-        GeometryReader { proxy in
-            let size = proxy.size
-            
-            if(currentPageIndex > 2) {
-                SignInView()
-            } else {
-                OnboardingView(screenSize: size)
-                    .background(Color("Background"))
+        ZStack {
+            GeometryReader { proxy in
+                let size = proxy.size
+                
+                if(currentPageIndex > 2) {
+                    NavigationView {
+                        ZStack {
+                            NavigationLink(destination: SignUpView(show: self.$show), isActive: self.$show) {
+                                Text("")
+                            }
+                            .hidden()
+                            
+                            SignInView(show: self.$show)
+                        }
+                        .navigationTitle("")
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)
+                    }
+                } else {
+                    OnboardingView(screenSize: size)
+                        .background(Color("Background"))
+                }
+                
             }
-            
         }
     }
 }

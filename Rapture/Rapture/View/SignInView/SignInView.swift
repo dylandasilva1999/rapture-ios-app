@@ -13,6 +13,7 @@ struct SignInView: View {
     @State var email = ""
     @State var password = ""
     @State var visible = false
+    @Binding var show: Bool
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -28,7 +29,7 @@ struct SignInView: View {
                         
                         //Register button
                         Button(action: {
-                            
+                            self.show.toggle()
                         }) {
                             Text("register")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -134,7 +135,10 @@ struct SignInView: View {
 }
 
 struct SignInView_Previews: PreviewProvider {
+    
+    @State static private var show = true
+    
     static var previews: some View {
-        SignInView()
+        SignInView(show: $show)
     }
 }
