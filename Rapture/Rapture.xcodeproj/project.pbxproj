@@ -11,6 +11,7 @@
 		5742350227051B3A00BA2B23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742350127051B3A00BA2B23 /* HomeView.swift */; };
 		57423506270526FA00BA2B23 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423505270526FA00BA2B23 /* SignInView.swift */; };
 		575E8FDE2706211200C2D05A /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */; };
+		575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E8FE027062FD800C2D05A /* SignUpView.swift */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		5742350127051B3A00BA2B23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		57423505270526FA00BA2B23 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		575E8FE027062FD800C2D05A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5798A94B26FB829C00337D7F /* Rapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5798A94E26FB829C00337D7F /* RaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaptureApp.swift; sourceTree = "<group>"; };
 		5798A95026FB829C00337D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			path = SignInView;
 			sourceTree = "<group>";
 		};
+		575E8FDF27062FC300C2D05A /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				575E8FE027062FD800C2D05A /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
 		5798A94226FB829C00337D7F = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		57CC0FC42704F22D00D853CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				575E8FDF27062FC300C2D05A /* SignUpView */,
 				57423504270526E500BA2B23 /* SignInView */,
 				57423503270526B100BA2B23 /* HomeView */,
 				57CC0FCD2704FCF800D853CC /* Onboarding */,
@@ -313,6 +324,7 @@
 				57423506270526FA00BA2B23 /* SignInView.swift in Sources */,
 				5798A95126FB829C00337D7F /* ContentView.swift in Sources */,
 				57CC0FCF2704FD1900D853CC /* OffsetPageTabView.swift in Sources */,
+				575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */,
 				57CC0FC72704F26100D853CC /* OnboardingView.swift in Sources */,
 				5742350227051B3A00BA2B23 /* HomeView.swift in Sources */,
 				5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */,
