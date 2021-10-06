@@ -9,12 +9,10 @@ import SwiftUI
 
 struct SignUpView: View {
     
+    @StateObject var registerData = RegisterViewModel()
+    
     @State var color = Color("Red")
-    @State var email = ""
-    @State var password = ""
-    @State var retypePassword = ""
     @State var visible = false
-    @State var retypeVisible = false
     @Binding var show: Bool
     
     var body: some View {
@@ -44,41 +42,71 @@ struct SignUpView: View {
                         Spacer()
                     }
                     
-                    //Sign Up Logo
-                    Image("Splash Logo")
-                        .resizable()
-                        .renderingMode(.original)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 240, height: 240, alignment: .center)
-                        .padding(.top, 40)
+                    //Profile Image
+                    ZStack {
+                        
+                        if registerData.profileImage_Data.count == 0 {
+                            Image(systemName: "person")
+                                .font(.system(size: 65))
+                                .foregroundColor(Color("White"))
+                                .frame(width: 240, height: 240)
+                                .background(Color("Red"))
+                                .clipShape(Circle())
+                        } else {
+                            Image(uiImage: UIImage(data: registerData.profileImage_Data)!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 240, height: 240)
+                                .clipShape(Circle())
+                        }
+                    }
+                    .padding(.top)
+                    .onTapGesture (perform: {
+                        registerData.picker.toggle()
+                    })
                     
                     VStack(alignment: .leading, spacing: 6) {
-                        //Sign Up boilerplate text
-                        Text("Create your account.")
-                            .font(Font.custom("Gilroy-Bold", size: 30))
-                            .foregroundColor(.white)
-                        
                         //Email input field
-                        TextField("email", text: self.$email)
+                        TextField("fullname", text: self.$registerData.name)
                             .font(Font.custom("Gilroy-Regular", size: 20))
                             .foregroundColor(.white)
                             .padding(20)
                             .foregroundColor(.white)
-                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 4))
-                            .padding(.top, 30)
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.registerData.name != "" ? Color("Red") : self.color, lineWidth: 4))
+                            .padding(.top, 00)
+                            .preferredColorScheme(.dark)
+                        
+                        //Email input field
+                        TextField("bio", text: self.$registerData.bio)
+                            .font(Font.custom("Gilroy-Regular", size: 20))
+                            .foregroundColor(.white)
+                            .padding(20)
+                            .foregroundColor(.white)
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.registerData.bio != "" ? Color("Red") : self.color, lineWidth: 4))
+                            .padding(.top, 20)
+                            .preferredColorScheme(.dark)
+                        
+                        //Email input field
+                        TextField("email", text: self.$registerData.email)
+                            .font(Font.custom("Gilroy-Regular", size: 20))
+                            .foregroundColor(.white)
+                            .padding(20)
+                            .foregroundColor(.white)
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.registerData.email != "" ? Color("Red") : self.color, lineWidth: 4))
+                            .padding(.top, 20)
                             .preferredColorScheme(.dark)
                         
                         HStack(spacing: 15) {
                             VStack {
                                 if self.visible {
                                     //Password input field
-                                    TextField("password", text: self.$password)
+                                    TextField("password", text: self.$registerData.password)
                                         .font(Font.custom("Gilroy-Regular", size: 20))
                                         .foregroundColor(.white)
                                         .foregroundColor(.white)
                                         .preferredColorScheme(.dark)
                                 } else  {
-                                    SecureField("password", text: self.$password)
+                                    SecureField("password", text: self.$registerData.password)
                                         .font(Font.custom("Gilroy-Regular", size: 20))
                                         .foregroundColor(.white)
                                         .foregroundColor(.white)
@@ -96,43 +124,12 @@ struct SignUpView: View {
                                 
                         }
                         .padding(20)
-                        .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 4))
-                        .padding(.top, 20)
-                        
-                        HStack(spacing: 15) {
-                            VStack {
-                                if self.visible {
-                                    //Re-enter Password input field
-                                    TextField("re-enter password", text: self.$retypePassword)
-                                        .font(Font.custom("Gilroy-Regular", size: 20))
-                                        .foregroundColor(.white)
-                                        .foregroundColor(.white)
-                                        .preferredColorScheme(.dark)
-                                } else  {
-                                    SecureField("re-enter password", text: self.$retypePassword)
-                                        .font(Font.custom("Gilroy-Regular", size: 20))
-                                        .foregroundColor(.white)
-                                        .foregroundColor(.white)
-                                        .preferredColorScheme(.dark)
-                                }
-                            }
-                            
-                            //Show re-enter password icon
-                            Button (action: {
-                                self.retypeVisible.toggle()
-                            }) {
-                                Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
-                                    .foregroundColor(.white)
-                            }
-                                
-                        }
-                        .padding(20)
-                        .background(RoundedRectangle(cornerRadius: 12).stroke(self.retypePassword != "" ? Color("Red") : self.color, lineWidth: 4))
+                        .background(RoundedRectangle(cornerRadius: 12).stroke(self.registerData.password != "" ? Color("Red") : self.color, lineWidth: 4))
                         .padding(.top, 20)
                         
                         //Sign Up Button
                         Button(action: {
-                            
+                            registerData.register()
                         }) {
                             Text("sign up")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -153,6 +150,9 @@ struct SignUpView: View {
         .navigationTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $registerData.picker, content: {
+            ImagePicker(picker: $registerData.picker, img_Data: $registerData.profileImage_Data)
+        })
     }
 }
 
