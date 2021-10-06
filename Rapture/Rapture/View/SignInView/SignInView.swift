@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignInView: View {
     
@@ -14,6 +15,8 @@ struct SignInView: View {
     @State var password = ""
     @State var visible = false
     @Binding var show: Bool
+    @State var alert = false
+    @State var error = ""
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -102,7 +105,7 @@ struct SignInView: View {
                             Spacer()
                             
                             Button(action: {
-                                
+                                self.resetPassword()
                             }) {
                                 Text("forget password")
                                     .font(Font.custom("Gilroy-Regular", size: 22))
@@ -113,7 +116,7 @@ struct SignInView: View {
                         
                         //Sign In Button
                         Button(action: {
-                            
+                            self.verify()
                         }) {
                             Text("sign in")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -131,6 +134,52 @@ struct SignInView: View {
                 .padding(.horizontal, 30)
             }
         }
+        
+        if self.alert {
+            ErrorView(alert: self.$alert, error: self.$error)
+        }
+    }
+    
+    func verify() {
+            if self.email != "" && self.password != "" {
+                Auth.auth().signIn(withEmail: self.email, password: self.password) { (res, err) in
+                    if err != nil {
+                        self.error = err!.localizedDescription
+                        self.alert.toggle()
+                        return
+                    }
+                    
+                    UserDefaults.standard.set(true, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                }
+            } else if self.email == "" && self.password != "" {
+                self.error = "Please fill in your email."
+                self.alert.toggle()
+            } else if self.password == "" && self.email != "" {
+                self.error = "Please fill in your password."
+                self.alert.toggle()
+            } else {
+                self.error = "Please fill in all your information."
+                self.alert.toggle()
+            }
+    }
+    
+    func resetPassword() {
+            if self.email != "" {
+                Auth.auth().sendPasswordReset(withEmail: self.email) { (err) in
+                    if err != nil {
+                        self.error = err!.localizedDescription
+                        self.alert.toggle()
+                        return
+                    }
+                    
+                    self.error = "RESET"
+                    self.alert.toggle()
+                }
+            } else {
+                self.error = "Your email field is empty."
+                self.alert.toggle()
+            }
     }
 }
 
