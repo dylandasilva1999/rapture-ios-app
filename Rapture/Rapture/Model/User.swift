@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct User {
+struct User: Encodable, Decodable {
     var uid: String
     var email: String
     var profileImageUrl: String

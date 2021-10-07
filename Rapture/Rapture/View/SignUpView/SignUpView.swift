@@ -57,7 +57,7 @@ struct SignUpView: View {
                         //Profile Image
                         ZStack {
                             if profileImage != nil {
-                               profileImage!
+                                profileImage!
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 240, height: 240)
@@ -96,6 +96,7 @@ struct SignUpView: View {
                                 .background(RoundedRectangle(cornerRadius: 12).stroke(self.username != "" ? Color("Red") : self.color, lineWidth: 4))
                                 .padding(.top, 00)
                                 .preferredColorScheme(.dark)
+                                .autocapitalization(.none)
                             
                             //Email input field
                             TextField("email", text: self.$email)
@@ -142,7 +143,7 @@ struct SignUpView: View {
                             .padding(.top, 20)
                             
                             Button(action: {
-                                self.register()
+                                self.signUp()
                             }) {
                                 Text("sign up")
                                     .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -182,31 +183,35 @@ struct SignUpView: View {
         }
     }
     
-    func register() {
-        if self.email != "" && self.password != "" && self.retypePassword != "" {
-            if self.password == self.retypePassword {
-                Auth.auth().createUser(withEmail: self.email, password: self.password) { (res, err) in
-                    if err != nil {
-                        self.error = err!.localizedDescription
-                        self.alert.toggle()
-                        return
-                    }
-                    
-                    UserDefaults.standard.set(true, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                }
-            } else if self.password != self.retypePassword {
-                self.error = "Please make sure your passwords match."
+    func clear() {
+        self.email = ""
+        self.username = ""
+        self.password = ""
+    }
+    
+    func signUp() {
+        if self.email != "" && self.password != "" && self.username != "" && self.profileImage != nil {
+            AuthService.signUp(username: username, email: email, password: password, imageData: imageData, onSuccess: { (user) in
+                self.clear()
+            }) { (errorMessage) in
+                self.error = errorMessage
                 self.alert.toggle()
+                return
             }
-        } else if self.email == "" && self.password != "" && self.retypePassword == "" {
-            self.error = "Please re-enter your password and fill in your email."
+        } else if self.email == "" && self.password != "" && self.username == "" {
+            self.error = "Please fill in your email and username."
             self.alert.toggle()
-        } else if self.email != "" && self.password != "" && self.retypePassword == "" {
-            self.error = "Please re-enter your password."
+        } else if self.email != "" && self.password != "" && self.username == "" {
+            self.error = "Please fill in your username."
             self.alert.toggle()
-        } else if self.email != "" && self.password == "" && self.retypePassword == "" {
-            self.error = "Please fill in your password and re-enter your password."
+        } else if self.email == "" && self.password == "" && self.username != "" {
+            self.error = "Please fill in your email and your password."
+            self.alert.toggle()
+        } else if self.email != "" && self.password == "" && self.username == "" {
+            self.error = "Please fill in your username and your password."
+            self.alert.toggle()
+        } else if self.email != "" && self.password == "" && self.username != "" {
+            self.error = "Please enter your password."
             self.alert.toggle()
         } else {
             self.error = "Please fill in all your information."

@@ -56,7 +56,7 @@ struct ErrorView: View {
             .cornerRadius(20)
             .position(x: UIScreen.main.bounds.width/2, y:UIScreen.main.bounds.height/2.2)
         }
-        .background(Color.black.opacity(0.8).edgesIgnoringSafeArea(.all))
+        .background(Color.black.opacity(0.85).edgesIgnoringSafeArea(.all))
     }
     
 }

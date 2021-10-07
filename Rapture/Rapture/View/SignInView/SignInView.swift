@@ -98,7 +98,7 @@ struct SignInView: View {
                                 Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
                                     .foregroundColor(.white)
                             }
-                                
+                            
                         }
                         .padding(20)
                         .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 4))
@@ -120,8 +120,7 @@ struct SignInView: View {
                         
                         //Sign In Button
                         Button(action: {
-                            self.verify()
-                            self.checkUser()
+                            self.signIn()
                         }) {
                             Text("sign in")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -145,59 +144,47 @@ struct SignInView: View {
         }
     }
     
-    func verify() {
-            if self.email != "" && self.password != "" {
-                Auth.auth().signIn(withEmail: self.email, password: self.password) { (res, err) in
-                    if err != nil {
-                        self.error = err!.localizedDescription
-                        self.alert.toggle()
-                        return
-                    }
-                    
-                    UserDefaults.standard.set(true, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                }
-            } else if self.email == "" && self.password != "" {
-                self.error = "Please fill in your email."
+    func clear() {
+        self.email = ""
+        self.password = ""
+    }
+    
+    func signIn() {
+        if self.email != "" && self.password != "" {
+            AuthService.signIn(email: email, password: password, onSuccess: { (user) in
+                self.clear()
+            }) { (errorMessage) in
+                self.error = errorMessage
                 self.alert.toggle()
-            } else if self.password == "" && self.email != "" {
-                self.error = "Please fill in your password."
-                self.alert.toggle()
-            } else {
-                self.error = "Please fill in all your information."
-                self.alert.toggle()
+                return
             }
+        } else if self.email == "" && self.password != "" {
+            self.error = "Please fill in your email."
+            self.alert.toggle()
+        } else if self.password == "" && self.email != "" {
+            self.error = "Please fill in your password."
+            self.alert.toggle()
+        } else {
+            self.error = "Please fill in all your information."
+            self.alert.toggle()
+        }
     }
     
     func resetPassword() {
-            if self.email != "" {
-                Auth.auth().sendPasswordReset(withEmail: self.email) { (err) in
-                    if err != nil {
-                        self.error = err!.localizedDescription
-                        self.alert.toggle()
-                        return
-                    }
-                    
-                    self.error = "RESET"
+        if self.email != "" {
+            Auth.auth().sendPasswordReset(withEmail: self.email) { (err) in
+                if err != nil {
+                    self.error = err!.localizedDescription
                     self.alert.toggle()
+                    return
                 }
-            } else {
-                self.error = "Your email field is empty."
+                
+                self.error = "RESET"
                 self.alert.toggle()
             }
-    }
-    
-    func checkUser() {
-        let ref = Firestore.firestore()
-        let uid = Auth.auth().currentUser!.uid
-        
-        ref.collection("Users").whereField("uid", arrayContains: uid).getDocuments {
-            (snap, err) in
-            
-            if err != nil {
-                self.verify()
-                return
-            }
+        } else {
+            self.error = "Your email field is empty."
+            self.alert.toggle()
         }
     }
 }

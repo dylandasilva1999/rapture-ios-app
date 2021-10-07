@@ -14,7 +14,7 @@ class StorageService {
     
     static var storage = Storage.storage()
     
-    static var storageRoot = storage.reference(forURL: "gs://rapture-660e6.appspot.com/profile")
+    static var storageRoot = storage.reference(forURL: "gs://rapture-660e6.appspot.com/")
     
     static var storageProfile = storageRoot.child("profile")
     
@@ -52,7 +52,7 @@ class StorageService {
                     let firestoreUserId = AuthService.getUserId(userId: userId)
                     let user = User.init(uid: userId, email: email, profileImageUrl: metaImageUrl, username: username, searchName: username.splitString(), bio: "")
                     
-                    guard let dict = try?user.username.asDictionary() else {return}
+                    guard let dict = try?user.asDictionary() else {return}
                     
                     firestoreUserId.setData(dict) {
                         (error) in

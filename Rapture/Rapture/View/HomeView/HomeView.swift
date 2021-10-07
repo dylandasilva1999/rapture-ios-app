@@ -6,15 +6,31 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
+    
+    @EnvironmentObject var session: SessionStore
+    
     var body: some View {
         ZStack {
             Color("Background")
                 .ignoresSafeArea()
             VStack {
-                Text("Home View")
-                    .foregroundColor(.white)
+                //Say out loud button
+                Button(action: {
+                    session.logout()
+                    UserDefaults.standard.set(false, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                }) {
+                    Text("sign out of account")
+                        .font(Font.custom("Gilroy-Regular", size: 25))
+                        .foregroundColor(Color("White"))
+                        .padding(.vertical, 25)
+                }
+                .frame(width: UIScreen.main.bounds.width - 80)
+                .background(Color("Red"))
+                .cornerRadius(20)
             }
         }
     }

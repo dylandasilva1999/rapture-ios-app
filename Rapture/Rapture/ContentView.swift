@@ -13,6 +13,8 @@ struct ContentView: View {
     @AppStorage("current_status") var status = false
     @State var show = false
     
+    @EnvironmentObject var session: SessionStore
+    
     var body: some View {
         ZStack {
             GeometryReader { proxy in
@@ -21,7 +23,7 @@ struct ContentView: View {
                 if(currentPageIndex > 2) {
                     NavigationView {
                         VStack {
-                            if self.status {
+                            if (session.session != nil) {
                                 HomeView()
                             } else {
                                 ZStack {
@@ -41,6 +43,7 @@ struct ContentView: View {
                             NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
                                 self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
                             }
+                            listen()
                         }
                     }
                 } else {
@@ -50,6 +53,10 @@ struct ContentView: View {
                 
             }
         }
+    }
+    
+    func listen() {
+        session.listen()
     }
 }
 
