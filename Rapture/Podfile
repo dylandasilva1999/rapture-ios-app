@@ -11,6 +11,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
+pod 'URLImage'
 
 # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
 # for Analytics without IDFA collection capability

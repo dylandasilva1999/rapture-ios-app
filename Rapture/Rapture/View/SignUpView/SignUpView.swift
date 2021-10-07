@@ -36,7 +36,6 @@ struct SignUpView: View {
                 
                 GeometryReader {_ in
                     VStack {
-                        
                         HStack {
                             //Back button
                             Button(action: {
@@ -57,7 +56,6 @@ struct SignUpView: View {
                         
                         //Profile Image
                         ZStack {
-                            
                             if profileImage != nil {
                                profileImage!
                                     .resizable()
