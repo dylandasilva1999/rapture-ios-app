@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct SignInView: View {
     
@@ -68,6 +69,7 @@ struct SignInView: View {
                             .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 4))
                             .padding(.top, 30)
                             .preferredColorScheme(.dark)
+                            .autocapitalization(.none)
                         
                         HStack(spacing: 15) {
                             VStack {
@@ -78,12 +80,14 @@ struct SignInView: View {
                                         .foregroundColor(.white)
                                         .foregroundColor(.white)
                                         .preferredColorScheme(.dark)
+                                        .autocapitalization(.none)
                                 } else  {
                                     SecureField("password", text: self.$password)
                                         .font(Font.custom("Gilroy-Regular", size: 20))
                                         .foregroundColor(.white)
                                         .foregroundColor(.white)
                                         .preferredColorScheme(.dark)
+                                        .autocapitalization(.none)
                                 }
                             }
                             
@@ -117,6 +121,7 @@ struct SignInView: View {
                         //Sign In Button
                         Button(action: {
                             self.verify()
+                            self.checkUser()
                         }) {
                             Text("sign in")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -180,6 +185,20 @@ struct SignInView: View {
                 self.error = "Your email field is empty."
                 self.alert.toggle()
             }
+    }
+    
+    func checkUser() {
+        let ref = Firestore.firestore()
+        let uid = Auth.auth().currentUser!.uid
+        
+        ref.collection("Users").whereField("uid", arrayContains: uid).getDocuments {
+            (snap, err) in
+            
+            if err != nil {
+                self.verify()
+                return
+            }
+        }
     }
 }
 

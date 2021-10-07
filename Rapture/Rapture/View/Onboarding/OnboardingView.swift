@@ -53,7 +53,7 @@ struct OnboardingView: View {
                                         .font(Font.custom("Gilroy-Regular", size: 20))
                                         .foregroundColor(Color("White"))
                                         .lineSpacing(5)
-                                        .frame(width: .infinity, height: 80, alignment: .leading)
+                                        .frame(width: 100, height: 80, alignment: .leading)
                                 }
                                 .padding(.top, 50)
                                 .padding(.leading, 40)
