@@ -111,7 +111,7 @@ struct SignInView: View {
                             Button(action: {
                                 self.resetPassword()
                             }) {
-                                Text("forget password")
+                                Text("forgot password")
                                     .font(Font.custom("Gilroy-Regular", size: 22))
                                     .foregroundColor(.white)
                             }
