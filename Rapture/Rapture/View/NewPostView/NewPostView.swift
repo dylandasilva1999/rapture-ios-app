@@ -106,9 +106,24 @@ struct NewPostView: View {
         if text.trimmingCharacters(in: .whitespaces).isEmpty && imageData.isEmpty {
             self.error = "Please add a caption and provide an image"
             self.alert.toggle()
+        } else if text.trimmingCharacters(in: .whitespaces) == "" && imageData.isEmpty == false {
+            self.error = "Please add a caption"
+            self.alert.toggle()
+        } else {
+            self.error = "Please provide and choose an image"
+            self.alert.toggle()
         }
         
         //Firebase
+        PostService.uploadPost(caption: text, imageData: imageData, onSuccess: {
+            self.clear()
+        }) {
+            (errorMessage) in
+            print ("Error \(errorMessage)")
+            self.error = errorMessage
+            self.alert.toggle()
+            return
+        }
     }
     
     //Clear field inputs
