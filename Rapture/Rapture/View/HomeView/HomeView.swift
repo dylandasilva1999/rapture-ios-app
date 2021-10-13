@@ -30,10 +30,13 @@ struct CustomTabView: View {
             TabView(selection: $selectedTab) {
                 MainView()
                     .tag("pentagon.fill")
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.2)
                 NewPostView()
                     .tag("plus")
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.2)
                 ProfileView()
                     .tag("person.fill")
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.2)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea(.all, edges: .bottom)
