@@ -16,6 +16,9 @@
 		57289F87270F1A9F001D4CD7 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289F86270F1A9F001D4CD7 /* SessionStore.swift */; };
 		5742350227051B3A00BA2B23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742350127051B3A00BA2B23 /* HomeView.swift */; };
 		57423506270526FA00BA2B23 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423505270526FA00BA2B23 /* SignInView.swift */; };
+		575C6F60271754F800D776E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F5F271754F800D776E8 /* ProfileView.swift */; };
+		575C6F632717556D00D776E8 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F622717556D00D776E8 /* NewPostView.swift */; };
+		575C6F66271755E700D776E8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F65271755E700D776E8 /* MainView.swift */; };
 		575E8FDE2706211200C2D05A /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */; };
 		575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E8FE027062FD800C2D05A /* SignUpView.swift */; };
 		575E8FE4270638DD00C2D05A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E8FE3270638DD00C2D05A /* ErrorView.swift */; };
@@ -42,6 +45,9 @@
 		57289F86270F1A9F001D4CD7 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		5742350127051B3A00BA2B23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		57423505270526FA00BA2B23 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		575C6F5F271754F800D776E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		575C6F622717556D00D776E8 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		575C6F65271755E700D776E8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		575E8FE027062FD800C2D05A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		575E8FE3270638DD00C2D05A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -142,6 +148,30 @@
 			path = SignInView;
 			sourceTree = "<group>";
 		};
+		575C6F5E271754E800D776E8 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				575C6F5F271754F800D776E8 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		575C6F612717551400D776E8 /* NewPostView */ = {
+			isa = PBXGroup;
+			children = (
+				575C6F622717556D00D776E8 /* NewPostView.swift */,
+			);
+			path = NewPostView;
+			sourceTree = "<group>";
+		};
+		575C6F64271755D800D776E8 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				575C6F65271755E700D776E8 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		575E8FDF27062FC300C2D05A /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +248,9 @@
 		57CC0FC42704F22D00D853CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				575C6F64271755D800D776E8 /* MainView */,
+				575C6F612717551400D776E8 /* NewPostView */,
+				575C6F5E271754E800D776E8 /* ProfileView */,
 				57289F74270E382C001D4CD7 /* ImagePicker */,
 				575E8FE2270638C600C2D05A /* ErrorView */,
 				575E8FDF27062FC300C2D05A /* SignUpView */,
@@ -382,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CC0FCC2704F8E500D853CC /* Item.swift in Sources */,
+				575C6F66271755E700D776E8 /* MainView.swift in Sources */,
 				57423506270526FA00BA2B23 /* SignInView.swift in Sources */,
 				5798A95126FB829C00337D7F /* ContentView.swift in Sources */,
 				57289F7E270F0A6E001D4CD7 /* AuthService.swift in Sources */,
@@ -389,10 +423,12 @@
 				57289F82270F1565001D4CD7 /* User.swift in Sources */,
 				575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */,
 				57289F80270F0A87001D4CD7 /* StorageService.swift in Sources */,
+				575C6F60271754F800D776E8 /* ProfileView.swift in Sources */,
 				57CC0FC72704F26100D853CC /* OnboardingView.swift in Sources */,
 				57289F76270E383B001D4CD7 /* ImagePicker.swift in Sources */,
 				5742350227051B3A00BA2B23 /* HomeView.swift in Sources */,
 				57289F87270F1A9F001D4CD7 /* SessionStore.swift in Sources */,
+				575C6F632717556D00D776E8 /* NewPostView.swift in Sources */,
 				575E8FE4270638DD00C2D05A /* ErrorView.swift in Sources */,
 				5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */,
 				57289F85270F15E3001D4CD7 /* Extensions.swift in Sources */,

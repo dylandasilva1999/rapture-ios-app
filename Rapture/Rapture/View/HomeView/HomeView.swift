@@ -13,30 +13,72 @@ struct HomeView: View {
     @EnvironmentObject var session: SessionStore
     
     var body: some View {
-        ZStack {
-            Color("Background")
-                .ignoresSafeArea()
-            VStack {
-                //Say out loud button
-                Button(action: {
-                    session.logout()
-                    UserDefaults.standard.set(false, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                }) {
-                    Text("sign out of account")
-                        .font(Font.custom("Gilroy-Regular", size: 25))
-                        .foregroundColor(Color("White"))
-                        .padding(.vertical, 25)
-                }
-                .frame(width: UIScreen.main.bounds.width - 80)
-                .background(Color("Red"))
-                .cornerRadius(20)
-            }
+        VStack {
+            CustomTabView()
         }
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+var tabs = ["pentagon.fill", "plus", "person.fill"]
+
+struct CustomTabView: View {
+    @State var selectedTab = "pentagon.fill"
+    @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
+    
+    var body: some View {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+            TabView(selection: $selectedTab) {
+                MainView()
+                    .tag("pentagon.fill")
+                NewPostView()
+                    .tag("plus")
+                ProfileView()
+                    .tag("person.fill")
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .ignoresSafeArea(.all, edges: .bottom)
+            
+            HStack(spacing: 0) {
+                ForEach(tabs, id: \.self) {
+                    image in
+                    TabButton(image: image, selectedTab: $selectedTab)
+                    
+                    if image != tabs.last {
+                        Spacer(minLength: 0)
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .padding(.bottom, edge!.bottom == 0 ? 20 : 0)
+            .padding(.horizontal)
+            .background(Color("Off Black"))
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .frame(width: UIScreen.main.bounds.width - 55)
+        }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
+        .background(Color("Background").ignoresSafeArea(.all, edges: .all))
+    }
+}
+
+struct TabButton: View {
+    var image: String
+    
+    @Binding var selectedTab: String
+    
+    var body: some View {
+        Button(action: {
+            selectedTab = image
+        }, label: {
+            Image(systemName: "\(image)")
+                .foregroundColor(selectedTab == image ? Color("Red") : Color("White"))
+                .font(.title2)
+                .padding()
+        })
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
