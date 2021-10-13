@@ -25,6 +25,10 @@ struct NewPostView: View {
     var body: some View {
         ZStack {
             ZStack(alignment: .top) {
+                
+                Color("Background")
+                    .ignoresSafeArea()
+                
                 VStack(spacing: 20) {
                     Text("Upload a post")
                         .font(Font.custom("Gilroy-Bold", size: 30))
@@ -62,7 +66,7 @@ struct NewPostView: View {
                         .background(RoundedRectangle(cornerRadius: 30).fill(Color("Off Black")))
                     
                     Button(action: {
-                        self.errorCheck()
+                        self.uploadPost()
                     }) {
                         Text("upload post")
                             .font(Font.custom("Gilroy-SemiBold", size: 22))
@@ -97,12 +101,14 @@ struct NewPostView: View {
         }
     }
     
-    //Error field check
-    func errorCheck(){
+    //Upload Post
+    func uploadPost() {
         if text.trimmingCharacters(in: .whitespaces).isEmpty && imageData.isEmpty {
             self.error = "Please add a caption and provide an image"
             self.alert.toggle()
         }
+        
+        //Firebase
     }
     
     //Clear field inputs
