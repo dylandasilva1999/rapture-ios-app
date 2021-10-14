@@ -6,12 +6,13 @@ target 'Rapture' do
   use_frameworks!
 
   # Pods for Rapture
-# add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
-pod 'Firebase/Storage'
-pod 'Firebase/Firestore'
-pod 'Firebase/Auth'
-pod 'URLImage'
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'URLImage'
+  pod 'SDWebImageSwiftUI'
 
 # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
 # for Analytics without IDFA collection capability
