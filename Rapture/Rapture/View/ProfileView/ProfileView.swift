@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileView: View {
+    
+    @EnvironmentObject var session: SessionStore
+    @State private var selection = 1
+    
     var body: some View {
-        Text("Profile View")
-            .foregroundColor(.white)
+        ScrollView {
+            VStack {
+                ProfileHeader(user: self.session.session)
+            }
+        }
     }
 }
 
