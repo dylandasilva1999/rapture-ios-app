@@ -109,20 +109,21 @@ struct NewPostView: View {
         } else if text.trimmingCharacters(in: .whitespaces) == "" && imageData.isEmpty == false {
             self.error = "Please add a caption"
             self.alert.toggle()
-        } else {
-            self.error = "Please provide and choose an image"
+        } else if text.trimmingCharacters(in: .whitespaces) != "" && imageData.isEmpty == true {
+            self.error = "Please provide an image"
             self.alert.toggle()
-        }
-        
-        //Firebase
-        PostService.uploadPost(caption: text, imageData: imageData, onSuccess: {
-            self.clear()
-        }) {
-            (errorMessage) in
-            print ("Error \(errorMessage)")
-            self.error = errorMessage
-            self.alert.toggle()
-            return
+        } else if text.trimmingCharacters(in: .whitespaces) != "" && imageData.isEmpty == false {
+            //Firebase
+            PostService.uploadPost(caption: text, imageData: imageData, onSuccess: {
+                self.clear()
+                MainView()
+            }) {
+                (errorMessage) in
+                print ("Error \(errorMessage)")
+                self.error = errorMessage
+                self.alert.toggle()
+                return
+            }
         }
     }
     
@@ -130,6 +131,15 @@ struct NewPostView: View {
     func clear() {
         self.text = ""
         self.imageData = Data()
+        self.postImage = Image(systemName: "photo.fill")
+            .font(.system(size: 45))
+            .foregroundColor(Color("White"))
+            .frame(width: UIScreen.main.bounds.width - 50, height: 250)
+            .background(Color("Red"))
+            .clipShape(RoundedRectangle(cornerRadius: 30))
+            .onTapGesture {
+                self.showingActionSheet = true
+            } as? Image
     }
     
     //Load Image
