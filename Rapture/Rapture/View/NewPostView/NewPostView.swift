@@ -116,7 +116,6 @@ struct NewPostView: View {
             //Firebase
             PostService.uploadPost(caption: text, imageData: imageData, onSuccess: {
                 self.clear()
-                MainView()
             }) {
                 (errorMessage) in
                 print ("Error \(errorMessage)")

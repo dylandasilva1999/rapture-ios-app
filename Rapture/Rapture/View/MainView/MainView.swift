@@ -6,11 +6,27 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct MainView: View {
+    
+    @EnvironmentObject var session: SessionStore
+    @StateObject var profileService = ProfileService()
+    
     var body: some View {
-        Text("Home View")
-            .foregroundColor(.white)
+        ScrollView {
+            VStack {
+                ForEach(self.profileService.posts, id: \.postId) {
+                    (post) in
+                    
+                    PostCardView(post: post)
+                        .frame(width: UIScreen.main.bounds.width - 55)
+                }
+            }
+        }
+        .onAppear {
+            self.profileService.loadUserPosts(userId: Auth.auth().currentUser!.uid)
+        }
     }
 }
 
