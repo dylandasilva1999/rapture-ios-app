@@ -39,7 +39,7 @@ class SessionStore: ObservableObject {
         do {
             try Auth.auth().signOut()
         } catch {
-            
+            print("already logged out")
         }
     }
     
