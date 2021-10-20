@@ -20,7 +20,7 @@ struct ProfileHeader: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
-                    .frame(width: 200, height: 200)
+                    .frame(width: 180, height: 180)
                     .padding()
             } else {
                 Image(systemName: "person")
