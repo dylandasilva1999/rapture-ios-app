@@ -49,20 +49,6 @@ struct ProfileHeader: View {
                         .foregroundColor(Color("White"))
                         .frame(width: UIScreen.main.bounds.width - 50)
                 }
- 
-                Button(action: {
-                    self.session.logout()
-                }) {
-                    Text("sign out")
-                        .font(Font.custom("Gilroy-SemiBold", size: 22))
-                        .foregroundColor(.white)
-                        .padding(.vertical, 25)
-                        .frame(width: UIScreen.main.bounds.width - 120)
-                }
-                .background(Color("Red"))
-                .cornerRadius(20)
-                .padding(.top, 20)
-                .shadow(color: Color("Red").opacity(0.4), radius: 15)
             }
             
             HStack(spacing: 40) {

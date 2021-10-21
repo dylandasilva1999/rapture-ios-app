@@ -10,8 +10,24 @@ import FirebaseAuth
 
 struct MainView: View {
     
+    @EnvironmentObject var session: SessionStore
+    @StateObject var profileService = ProfileService()
+    @ObservedObject var mainService = MainService()
+
     var body: some View {
-        Text("Main")
+        ScrollView {
+            VStack {
+                ForEach(self.mainService.allPosts, id: \.postId) {
+                    (allPosts) in
+
+                    PostCardView(post: allPosts)
+                        .frame(width: UIScreen.main.bounds.width - 55)
+                }
+            }
+        }
+        .onAppear {
+            self.mainService.loadAllPosts()
+        }
     }
 }
 
@@ -20,22 +36,3 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
-
-//@EnvironmentObject var session: SessionStore
-//@StateObject var profileService = ProfileService()
-//
-//var body: some View {
-//    ScrollView {
-//        VStack {
-//            ForEach(self.profileService.posts, id: \.postId) {
-//                (post) in
-//
-//                PostCardView(post: post)
-//                    .frame(width: UIScreen.main.bounds.width - 55)
-//            }
-//        }
-//    }
-//    .onAppear {
-//        self.profileService.loadUserPosts(userId: Auth.auth().currentUser!.uid)
-//    }
-//}

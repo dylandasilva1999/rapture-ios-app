@@ -40,7 +40,7 @@ struct NewPostView: View {
                             postImage!.resizable()
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width - 50, height: 250)
+                                .frame(width: UIScreen.main.bounds.width - 60, height: 250)
                                 .clipShape(RoundedRectangle(cornerRadius: 30))
                                 .onTapGesture {
                                     self.showingActionSheet = true
@@ -49,7 +49,7 @@ struct NewPostView: View {
                             Image(systemName: "photo.fill")
                                 .font(.system(size: 45))
                                 .foregroundColor(Color("White"))
-                                .frame(width: UIScreen.main.bounds.width - 50, height: 250)
+                                .frame(width: UIScreen.main.bounds.width - 60, height: 250)
                                 .background(Color("Red"))
                                 .clipShape(RoundedRectangle(cornerRadius: 30))
                                 .onTapGesture {

@@ -18,11 +18,9 @@ struct PostCardView: View {
                 HStack {
                     WebImage(url: URL(string: post.profile)!)
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .scaledToFit()
                         .clipShape(Circle())
-                        .frame(width: 70, height: 70)
-                        .padding(.leading, 25)
+                        .frame(width: 50, height: 50)
+                        .padding(.leading, 35)
                         .padding(.top, 20)
                     
                     VStack(alignment: .leading, spacing: 5) {
@@ -35,7 +33,9 @@ struct PostCardView: View {
                             .foregroundColor(Color("White").opacity(0.4))
                     }
                     .padding(.top, 20)
+                    .padding(.leading, 10)
                 }
+                .padding(.bottom, 15)
                 
                 WebImage(url: URL(string: post.mediaUrl)!)
                     .resizable()

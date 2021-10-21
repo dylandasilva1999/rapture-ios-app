@@ -19,6 +19,12 @@ struct SignInView: View {
     @State var alert = false
     @State var error = ""
     
+    @EnvironmentObject var session: SessionStore
+    
+    func listen() {
+        session.listen()
+    }
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             
@@ -121,6 +127,7 @@ struct SignInView: View {
                         //Sign In Button
                         Button(action: {
                             self.signIn()
+                            self.listen()
                         }) {
                             Text("sign in")
                                 .font(Font.custom("Gilroy-SemiBold", size: 22))

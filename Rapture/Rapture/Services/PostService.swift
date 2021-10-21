@@ -16,11 +16,16 @@ class PostService {
     static var Posts = AuthService.storeRoot.collection("posts")
     
     static var AllPosts = AuthService.storeRoot.collection("allposts")
+    @Published var allPosts: [Post] = []
     
     static var TimeLine = AuthService.storeRoot.collection("timeline")
     
     static func PostsUserId(userId: String) -> DocumentReference {
         return Posts.document(userId)
+    }
+    
+    static func PostsId(postId: String) -> DocumentReference {
+        return AllPosts.document(postId)
     }
     
     static func timelineUserId(userId: String) -> DocumentReference {
@@ -64,6 +69,30 @@ class PostService {
                 posts.append(decoder)
             }
             onSuccess(posts)
+        }
+    }
+    
+    static func loadAllPosts(postId: String, onSuccess: @escaping(_ posts: [Post]) -> Void) {
+        
+        PostService.PostsId(postId: postId).collection("allposts").getDocuments {
+            (snapshot, error) in
+            
+            guard let snap = snapshot else {
+                print("Error")
+                return
+            }
+            
+            var allPosts = [Post]()
+            
+            for doc in snap.documents {
+                let dict = doc.data()
+                guard let decoder = try? Post.init(fromDictionary: dict)
+                else {
+                    return
+                }
+                allPosts.append(decoder)
+            }
+            onSuccess(allPosts)
         }
     }
 }

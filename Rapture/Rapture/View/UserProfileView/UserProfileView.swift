@@ -1,47 +1,30 @@
 //
-//  ProfileView.swift
+//  UserProfileView.swift
 //  Rapture
 //
-//  Created by Dylan da Silva on 2021/10/13.
+//  Created by Dylan da Silva on 2021/10/21.
 //
 
 import SwiftUI
 import SDWebImageSwiftUI
 import FirebaseAuth
 
-struct ProfileView: View {
+struct UserProfileView: View {
     
-    @EnvironmentObject var session: SessionStore
+    var user: User
+    
     @State private var selection = 0
     @StateObject var profileService = ProfileService()
     
     var columns = [GridItem(.flexible(minimum: 120), spacing: 0),
                    GridItem(.flexible(minimum: 120), spacing: 0)]
     
-    init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("Red"))
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-    }
-    
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeader(user: self.session.session, postsCount: profileService.posts.count, following: $profileService.following, followers: $profileService.followers)
+                ProfileHeader(user: user, postsCount: profileService.posts.count, following: $profileService.following, followers: $profileService.followers)
                 
-                Button(action: {
-                    self.session.logout()
-                }) {
-                    Text("sign out")
-                        .font(Font.custom("Gilroy-SemiBold", size: 22))
-                        .foregroundColor(.white)
-                        .padding(.vertical, 25)
-                        .frame(width: UIScreen.main.bounds.width - 120)
-                }
-                .background(Color("Red"))
-                .cornerRadius(20)
-                .padding(.top, 20)
-                .shadow(color: Color("Red").opacity(0.4), radius: 15)
+                FollowButton(user: user, followCheck: $profileService.followCheck, followingCount: $profileService.following, followersCount: $profileService.followers)
                 
                 Picker("", selection: $selection) {
                     Text("grid")
@@ -76,16 +59,12 @@ struct ProfileView: View {
                         }
                     }
                 } else {
-                    if (self.session.session == nil) {
-                        Text("")
-                    } else {
-                        ScrollView {
-                            VStack {
-                                ForEach(self.profileService.posts, id: \.postId) {
-                                    (post) in
-                                    
-                                    PostCardView(post: post)
-                                }
+                    ScrollView {
+                        VStack {
+                            ForEach(self.profileService.posts, id: \.postId) {
+                                (post) in
+                                
+                                PostCardView(post: post)
                             }
                         }
                     }
@@ -94,14 +73,9 @@ struct ProfileView: View {
             .frame(width: UIScreen.main.bounds.width/1.1)
             .padding(.top, 20)
         }
+        .background(Color("Background").ignoresSafeArea(.all))
         .onAppear {
-            self.profileService.loadUserPosts(userId: Auth.auth().currentUser!.uid)
+            self.profileService.loadUserPosts(userId: self.user.uid)
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
     }
 }
