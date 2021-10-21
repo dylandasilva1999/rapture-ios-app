@@ -29,6 +29,8 @@
 		575E8FDE2706211200C2D05A /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */; };
 		575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E8FE027062FD800C2D05A /* SignUpView.swift */; };
 		575E8FE4270638DD00C2D05A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E8FE3270638DD00C2D05A /* ErrorView.swift */; };
+		578E41122721601000592D0A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41112721601000592D0A /* SearchBar.swift */; };
+		578E4115272160C600592D0A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E4114272160C600592D0A /* SearchView.swift */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		575E8FDD2706211200C2D05A /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		575E8FE027062FD800C2D05A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		575E8FE3270638DD00C2D05A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		578E41112721601000592D0A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		578E4114272160C600592D0A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5798A94B26FB829C00337D7F /* Rapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5798A94E26FB829C00337D7F /* RaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaptureApp.swift; sourceTree = "<group>"; };
 		5798A95026FB829C00337D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			children = (
 				5732403127184E51000DA117 /* ProfileHeader.swift */,
 				5732403A27186E85000DA117 /* PostCard.swift */,
+				578E41112721601000592D0A /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +227,14 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
+		578E4113272160B400592D0A /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				578E4114272160C600592D0A /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
 		5798A94226FB829C00337D7F = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +296,7 @@
 		57CC0FC42704F22D00D853CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				578E4113272160B400592D0A /* SearchView */,
 				5732403727186B50000DA117 /* PostCardView */,
 				575C6F64271755D800D776E8 /* MainView */,
 				575C6F612717551400D776E8 /* NewPostView */,
@@ -464,11 +478,13 @@
 				57324036271869D0000DA117 /* ProfileService.swift in Sources */,
 				57289F80270F0A87001D4CD7 /* StorageService.swift in Sources */,
 				575C6F60271754F800D776E8 /* ProfileView.swift in Sources */,
+				578E41122721601000592D0A /* SearchBar.swift in Sources */,
 				57CC0FC72704F26100D853CC /* OnboardingView.swift in Sources */,
 				57289F76270E383B001D4CD7 /* ImagePicker.swift in Sources */,
 				5742350227051B3A00BA2B23 /* HomeView.swift in Sources */,
 				57289F87270F1A9F001D4CD7 /* SessionStore.swift in Sources */,
 				5732403227184E51000DA117 /* ProfileHeader.swift in Sources */,
+				578E4115272160C600592D0A /* SearchView.swift in Sources */,
 				575C6F632717556D00D776E8 /* NewPostView.swift in Sources */,
 				575C6F6A27177B3500D776E8 /* PostService.swift in Sources */,
 				573240342718611E000DA117 /* PostCardService.swift in Sources */,

@@ -19,7 +19,7 @@ struct HomeView: View {
     }
 }
 
-var tabs = ["pentagon.fill", "plus", "person.fill"]
+var tabs = ["pentagon.fill", "magnifyingglass", "plus", "person.fill"]
 
 struct CustomTabView: View {
     @State var selectedTab = "pentagon.fill"
@@ -30,6 +30,9 @@ struct CustomTabView: View {
             TabView(selection: $selectedTab) {
                 MainView()
                     .tag("pentagon.fill")
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.2)
+                SearchView()
+                    .tag("magnifyingglass")
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.2)
                 NewPostView()
                     .tag("plus")
