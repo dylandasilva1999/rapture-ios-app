@@ -47,11 +47,14 @@ struct PostCard: View {
                     .scaleEffect(animate ? animatedScale : 1)
                     .animation(.easeIn(duration: duration))
                     
-                    Image(systemName: "bubble.middle.bottom")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color("White"))
-                        .frame(width: 16, height: 16, alignment: .center)
+                    NavigationLink(destination: CommentView(post: self.postCardService.post)) {
+                        Image(systemName: "bubble.middle.bottom")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color("White"))
+                            .frame(width: 16, height: 16, alignment: .center)
+                    }
+                    .accentColor(Color("Red"))
                 }
                 
                 if (self.postCardService.post.likeCount > 0) {

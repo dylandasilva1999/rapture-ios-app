@@ -74,6 +74,7 @@ struct UserProfileView: View {
             .padding(.top, 20)
         }
         .background(Color("Background").ignoresSafeArea(.all))
+        .accentColor(Color("Red"))
         .onAppear {
             self.profileService.loadUserPosts(userId: self.user.uid)
         }

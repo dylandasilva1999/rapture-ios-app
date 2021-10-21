@@ -36,7 +36,7 @@ struct ProfileView: View {
                         .font(Font.custom("Gilroy-SemiBold", size: 22))
                         .foregroundColor(.white)
                         .padding(.vertical, 25)
-                        .frame(width: UIScreen.main.bounds.width - 120)
+                        .frame(width: UIScreen.main.bounds.width - 60)
                 }
                 .background(Color("Red"))
                 .cornerRadius(20)

@@ -48,6 +48,26 @@ class PostService {
         
     }
     
+    static func loadPost(postId: String, onSuccess: @escaping(_ post: Post) -> Void) {
+        
+        PostService.AllPosts.document(postId).getDocument {
+            (snapshot, error) in
+            
+            guard let snap = snapshot else {
+                print("Error")
+                return
+            }
+            
+            let dict = snap.data()
+            
+            guard let decoded = try? Post.init(fromDictionary: dict!) else {
+                return
+            }
+            
+            onSuccess(decoded)
+        }
+    }
+    
     static func loadUserPosts(userId: String, onSuccess: @escaping(_ posts: [Post]) -> Void) {
         
         PostService.PostsUserId(userId: userId).collection("posts").getDocuments {

@@ -36,6 +36,11 @@
 		578E411B272183B700592D0A /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E411A272183B700592D0A /* FollowButton.swift */; };
 		578E411E2721860000592D0A /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E411D2721860000592D0A /* UserProfileView.swift */; };
 		578E41222721912900592D0A /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41212721912900592D0A /* MainService.swift */; };
+		578E41242721B06100592D0A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41232721B06100592D0A /* Comment.swift */; };
+		578E41262721B0D000592D0A /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41252721B0D000592D0A /* CommentService.swift */; };
+		578E41292721B8A000592D0A /* CommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41282721B8A000592D0A /* CommentCard.swift */; };
+		578E412B2721BA4C00592D0A /* CommentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E412A2721BA4C00592D0A /* CommentInput.swift */; };
+		578E412E2721BC9700592D0A /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E412D2721BC9700592D0A /* CommentView.swift */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -79,6 +84,11 @@
 		578E411A272183B700592D0A /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		578E411D2721860000592D0A /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		578E41212721912900592D0A /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		578E41232721B06100592D0A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		578E41252721B0D000592D0A /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		578E41282721B8A000592D0A /* CommentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCard.swift; sourceTree = "<group>"; };
+		578E412A2721BA4C00592D0A /* CommentInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInput.swift; sourceTree = "<group>"; };
+		578E412D2721BC9700592D0A /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		5798A94B26FB829C00337D7F /* Rapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5798A94E26FB829C00337D7F /* RaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaptureApp.swift; sourceTree = "<group>"; };
 		5798A95026FB829C00337D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +164,7 @@
 				578E41162721663B00592D0A /* SearchService.swift */,
 				578E41182721808A00592D0A /* FollowService.swift */,
 				578E41212721912900592D0A /* MainService.swift */,
+				578E41252721B0D000592D0A /* CommentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -173,6 +184,8 @@
 				5732403A27186E85000DA117 /* PostCard.swift */,
 				578E41112721601000592D0A /* SearchBar.swift */,
 				578E411A272183B700592D0A /* FollowButton.swift */,
+				578E41282721B8A000592D0A /* CommentCard.swift */,
+				578E412A2721BA4C00592D0A /* CommentInput.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -257,6 +270,14 @@
 			path = UserProfileView;
 			sourceTree = "<group>";
 		};
+		578E412C2721BC8C00592D0A /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				578E412D2721BC9700592D0A /* CommentView.swift */,
+			);
+			path = CommentView;
+			sourceTree = "<group>";
+		};
 		5798A94226FB829C00337D7F = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +339,7 @@
 		57CC0FC42704F22D00D853CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				578E412C2721BC8C00592D0A /* CommentView */,
 				578E411C272185EE00592D0A /* UserProfileView */,
 				578E4113272160B400592D0A /* SearchView */,
 				5732403727186B50000DA117 /* PostCardView */,
@@ -340,6 +362,7 @@
 				57CC0FCB2704F8E500D853CC /* Item.swift */,
 				57289F81270F1565001D4CD7 /* User.swift */,
 				575C6F67271778D700D776E8 /* Post.swift */,
+				578E41232721B06100592D0A /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,12 +515,14 @@
 				57CC0FCC2704F8E500D853CC /* Item.swift in Sources */,
 				578E41222721912900592D0A /* MainService.swift in Sources */,
 				575C6F66271755E700D776E8 /* MainView.swift in Sources */,
+				578E412E2721BC9700592D0A /* CommentView.swift in Sources */,
 				57423506270526FA00BA2B23 /* SignInView.swift in Sources */,
 				5798A95126FB829C00337D7F /* ContentView.swift in Sources */,
 				57289F7E270F0A6E001D4CD7 /* AuthService.swift in Sources */,
 				57CC0FCF2704FD1900D853CC /* OffsetPageTabView.swift in Sources */,
 				57289F82270F1565001D4CD7 /* User.swift in Sources */,
 				575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */,
+				578E41292721B8A000592D0A /* CommentCard.swift in Sources */,
 				5732403B27186E85000DA117 /* PostCard.swift in Sources */,
 				57324036271869D0000DA117 /* ProfileService.swift in Sources */,
 				57289F80270F0A87001D4CD7 /* StorageService.swift in Sources */,
@@ -515,10 +540,13 @@
 				573240342718611E000DA117 /* PostCardService.swift in Sources */,
 				578E41192721808A00592D0A /* FollowService.swift in Sources */,
 				575E8FE4270638DD00C2D05A /* ErrorView.swift in Sources */,
+				578E412B2721BA4C00592D0A /* CommentInput.swift in Sources */,
 				575C6F68271778D700D776E8 /* Post.swift in Sources */,
 				578E411B272183B700592D0A /* FollowButton.swift in Sources */,
 				578E41172721663B00592D0A /* SearchService.swift in Sources */,
 				5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */,
+				578E41262721B0D000592D0A /* CommentService.swift in Sources */,
+				578E41242721B06100592D0A /* Comment.swift in Sources */,
 				57289F85270F15E3001D4CD7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
