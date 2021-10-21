@@ -24,6 +24,11 @@ struct CommentView: View {
                         
                         CommentCard(comment: comment)
                     }
+                } else {
+                    Text("No Comments Yet...")
+                        .font(Font.custom("Gilroy-Bold", size: 25))
+                        .foregroundColor(Color("White"))
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/1.5, alignment: .center)
                 }
             }
             CommentInput(post: post, postId: postId)
