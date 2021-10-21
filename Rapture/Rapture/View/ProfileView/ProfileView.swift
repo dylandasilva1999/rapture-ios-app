@@ -27,7 +27,7 @@ struct ProfileView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeader(user: self.session.session)
+                ProfileHeader(user: self.session.session, postsCount: profileService.posts.count)
                 Picker("", selection: $selection) {
                     Text("grid")
                         .tag(0)

@@ -12,6 +12,7 @@ struct ProfileHeader: View {
     
     @EnvironmentObject var session: SessionStore
     var user: User?
+    var postsCount: Int
     
     var body: some View {
         VStack {
@@ -85,7 +86,7 @@ struct ProfileHeader: View {
                 }
                 
                 VStack {
-                    Text("45")
+                    Text("\(postsCount)")
                         .font(Font.custom("Gilroy-Bold", size: 30))
                         .foregroundColor(Color("White"))
                         .padding(.bottom, 2)
