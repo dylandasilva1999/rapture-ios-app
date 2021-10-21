@@ -14,6 +14,9 @@ struct ProfileHeader: View {
     var user: User?
     var postsCount: Int
     
+    @Binding var following: Int
+    @Binding var followers: Int
+    
     var body: some View {
         VStack {
             if user != nil {
@@ -64,7 +67,7 @@ struct ProfileHeader: View {
             
             HStack(spacing: 40) {
                 VStack {
-                    Text("1.2k")
+                    Text("\(following)")
                         .font(Font.custom("Gilroy-Bold", size: 30))
                         .foregroundColor(Color("White"))
                         .padding(.bottom, 2)
@@ -75,7 +78,7 @@ struct ProfileHeader: View {
                 }
                 
                 VStack {
-                    Text("1.2k")
+                    Text("\(followers)")
                         .font(Font.custom("Gilroy-Bold", size: 30))
                         .foregroundColor(Color("White"))
                         .padding(.bottom, 2)
