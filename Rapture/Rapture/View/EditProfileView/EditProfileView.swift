@@ -126,16 +126,6 @@ struct EditProfileView: View {
                                         .onTapGesture {
                                             self.showingActionSheet = true
                                         }
-                                } else {
-                                    Image(systemName: "person")
-                                        .font(.system(size: 65))
-                                        .foregroundColor(Color("White"))
-                                        .frame(width: 220, height: 240)
-                                        .background(Color("Red"))
-                                        .clipShape(Circle())
-                                        .onTapGesture {
-                                            self.showingActionSheet = true
-                                        }
                                 }
                             }
                         }

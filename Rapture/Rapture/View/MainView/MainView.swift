@@ -13,13 +13,22 @@ struct MainView: View {
     @EnvironmentObject var session: SessionStore
     @StateObject var profileService = ProfileService()
     @ObservedObject var mainService = MainService()
-
+    
     var body: some View {
         ScrollView {
+            HStack {
+                Text("Feed")
+                    .font(Font.custom("Gilroy-Bold", size: 30))
+                    .foregroundColor(Color("White"))
+                
+                Spacer()
+            }
+            .frame(width: UIScreen.main.bounds.width - 60)
+            
             VStack {
                 ForEach(self.mainService.allPosts, id: \.postId) {
                     (allPosts) in
-
+                    
                     PostCardView(post: allPosts)
                         .frame(width: UIScreen.main.bounds.width - 55)
                 }
