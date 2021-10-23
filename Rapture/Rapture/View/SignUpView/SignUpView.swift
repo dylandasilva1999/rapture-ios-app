@@ -139,7 +139,7 @@ struct SignUpView: View {
                                 
                             }
                             .padding(20)
-                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 3))
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 4))
                             .padding(.top, 20)
                             
                             Button(action: {

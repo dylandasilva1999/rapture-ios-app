@@ -31,20 +31,40 @@ struct ProfileView: View {
             VStack {
                 ProfileHeader(user: self.session.session, postsCount: profileService.posts.count, following: $profileService.following, followers: $profileService.followers)
                 
-                Button(action: {
-                    self.session.logout()
-                }) {
-                    Text("sign out")
-                        .font(Font.custom("Gilroy-SemiBold", size: 22))
-                        .foregroundColor(.white)
-                        .padding(.vertical, 25)
-                        .frame(width: UIScreen.main.bounds.width - 60)
+                HStack {
+                    NavigationLink(destination: EditProfileView(session: self.session.session), isActive: $isLinkActive) {
+                        Button(action: {
+                            self.isLinkActive = true
+                        }) {
+                            Text("edit profile")
+                                .font(Font.custom("Gilroy-SemiBold", size: 22))
+                                .foregroundColor(.white)
+                                .padding(.vertical, 25)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .background(Color("Red"))
+                        .cornerRadius(20)
+                        .padding(.top, 20)
+                        .shadow(color: Color("Red").opacity(0.4), radius: 15)
+                    }
+                    
+                    Button(action: {
+                        self.session.logout()
+                    }) {
+                        Text("sign out")
+                            .font(Font.custom("Gilroy-SemiBold", size: 22))
+                            .foregroundColor(.white)
+                            .padding(.vertical, 25)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .background(RoundedRectangle(cornerRadius: 20).stroke(Color("Red"), lineWidth: 3))
+                    .cornerRadius(20)
+                    .padding(.top, 20)
+                    .shadow(color: Color("Red").opacity(0.4), radius: 15)
                 }
-                .background(Color("Red"))
-                .cornerRadius(20)
-                .padding(.top, 20)
-                .shadow(color: Color("Red").opacity(0.4), radius: 15)
-                
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: UIScreen.main.bounds.width - 60)
+
                 Picker("", selection: $selection) {
                     Text("grid")
                         .tag(0)

@@ -21,32 +21,13 @@ struct ProfileHeader: View {
     var body: some View {
         VStack {
             if user != nil {
-                ZStack {
-                    WebImage(url: URL(string: user!.profileImageUrl))
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                        .frame(width: 160, height: 160)
-                        .padding()
-                    
-                    NavigationLink(destination: EditProfileView(session: self.session.session), isActive: $isLinkActive) {
-                        Button(action: {
-                            self.isLinkActive = true
-                        }) {
-                            Image(systemName: "pencil")
-                                .font(.system(size: 22))
-                                .foregroundColor(Color("White"))
-                                .frame(width: 40, height: 40)
-                                .background(Color("Red"))
-                                .clipShape(Circle())
-                        }
-                        .background(Color("Red"))
-                        .cornerRadius(20)
-                        .padding(.top, 110)
-                        .padding(.leading, 100)
-                        .shadow(color: Color("Red").opacity(0.4), radius: 15)
-                    }
-                }
+                WebImage(url: URL(string: user!.profileImageUrl))
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(Circle())
+                    .frame(width: 160, height: 160)
+                    .padding()
+                
                 
             } else {
                 Image(systemName: "person")
@@ -55,24 +36,6 @@ struct ProfileHeader: View {
                     .frame(width: 160, height: 160)
                     .background(Color("Red"))
                     .clipShape(Circle())
-                
-                NavigationLink(destination: EditProfileView(session: self.session.session), isActive: $isLinkActive) {
-                    Button(action: {
-                        self.isLinkActive = true
-                    }) {
-                        Image(systemName: "pencil")
-                            .font(.system(size: 22))
-                            .foregroundColor(Color("White"))
-                            .frame(width: 40, height: 40)
-                            .background(Color("Red"))
-                            .clipShape(Circle())
-                    }
-                    .background(Color("Red"))
-                    .cornerRadius(20)
-                    .padding(.top, 110)
-                    .padding(.leading, 100)
-                    .shadow(color: Color("Red").opacity(0.4), radius: 15)
-                }
             }
             
             VStack {
