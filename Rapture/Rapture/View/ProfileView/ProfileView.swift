@@ -24,6 +24,7 @@ struct ProfileView: View {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("Red"))
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UINavigationBar.appearance().tintColor = UIColor(Color("White"))
     }
     
     var body: some View {
@@ -47,6 +48,7 @@ struct ProfileView: View {
                         .padding(.top, 20)
                         .shadow(color: Color("Red").opacity(0.4), radius: 15)
                     }
+                    .accentColor(Color("White"))
                     
                     Button(action: {
                         self.session.logout()
