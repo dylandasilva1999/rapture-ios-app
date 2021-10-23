@@ -41,6 +41,8 @@
 		578E41292721B8A000592D0A /* CommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41282721B8A000592D0A /* CommentCard.swift */; };
 		578E412B2721BA4C00592D0A /* CommentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E412A2721BA4C00592D0A /* CommentInput.swift */; };
 		578E412E2721BC9700592D0A /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E412D2721BC9700592D0A /* CommentView.swift */; };
+		578E41312721DD6A00592D0A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E41302721DD6A00592D0A /* EditProfileView.swift */; };
+		578E4133272439F200592D0A /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E4132272439F200592D0A /* FormField.swift */; };
 		5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A94E26FB829C00337D7F /* RaptureApp.swift */; };
 		5798A95126FB829C00337D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798A95026FB829C00337D7F /* ContentView.swift */; };
 		5798A95326FB829D00337D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5798A95226FB829D00337D7F /* Assets.xcassets */; };
@@ -89,6 +91,8 @@
 		578E41282721B8A000592D0A /* CommentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCard.swift; sourceTree = "<group>"; };
 		578E412A2721BA4C00592D0A /* CommentInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInput.swift; sourceTree = "<group>"; };
 		578E412D2721BC9700592D0A /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		578E41302721DD6A00592D0A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		578E4132272439F200592D0A /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		5798A94B26FB829C00337D7F /* Rapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5798A94E26FB829C00337D7F /* RaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaptureApp.swift; sourceTree = "<group>"; };
 		5798A95026FB829C00337D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				578E411A272183B700592D0A /* FollowButton.swift */,
 				578E41282721B8A000592D0A /* CommentCard.swift */,
 				578E412A2721BA4C00592D0A /* CommentInput.swift */,
+				578E4132272439F200592D0A /* FormField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -278,6 +283,14 @@
 			path = CommentView;
 			sourceTree = "<group>";
 		};
+		578E412F2721DD5900592D0A /* EditProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				578E41302721DD6A00592D0A /* EditProfileView.swift */,
+			);
+			path = EditProfileView;
+			sourceTree = "<group>";
+		};
 		5798A94226FB829C00337D7F = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +352,7 @@
 		57CC0FC42704F22D00D853CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				578E412F2721DD5900592D0A /* EditProfileView */,
 				578E412C2721BC8C00592D0A /* CommentView */,
 				578E411C272185EE00592D0A /* UserProfileView */,
 				578E4113272160B400592D0A /* SearchView */,
@@ -529,6 +543,7 @@
 				575C6F60271754F800D776E8 /* ProfileView.swift in Sources */,
 				578E41122721601000592D0A /* SearchBar.swift in Sources */,
 				57CC0FC72704F26100D853CC /* OnboardingView.swift in Sources */,
+				578E4133272439F200592D0A /* FormField.swift in Sources */,
 				57289F76270E383B001D4CD7 /* ImagePicker.swift in Sources */,
 				5742350227051B3A00BA2B23 /* HomeView.swift in Sources */,
 				57289F87270F1A9F001D4CD7 /* SessionStore.swift in Sources */,
@@ -543,6 +558,7 @@
 				578E412B2721BA4C00592D0A /* CommentInput.swift in Sources */,
 				575C6F68271778D700D776E8 /* Post.swift in Sources */,
 				578E411B272183B700592D0A /* FollowButton.swift in Sources */,
+				578E41312721DD6A00592D0A /* EditProfileView.swift in Sources */,
 				578E41172721663B00592D0A /* SearchService.swift in Sources */,
 				5798A94F26FB829C00337D7F /* RaptureApp.swift in Sources */,
 				578E41262721B0D000592D0A /* CommentService.swift in Sources */,

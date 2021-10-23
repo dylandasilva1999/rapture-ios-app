@@ -44,7 +44,7 @@ struct ErrorView: View {
                         .font(Font.custom("Gilroy-Regular", size: 25))
                         .foregroundColor(Color("White"))
                         .padding(.vertical, 22)
-                        .frame(width: UIScreen.main.bounds.width - 125)
+                        .frame(width: UIScreen.main.bounds.width - 115)
                 }
                 .background(Color("Red"))
                 .cornerRadius(20)

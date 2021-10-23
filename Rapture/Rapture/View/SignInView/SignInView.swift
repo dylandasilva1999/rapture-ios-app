@@ -72,7 +72,7 @@ struct SignInView: View {
                             .foregroundColor(.white)
                             .padding(20)
                             .foregroundColor(.white)
-                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 4))
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 3))
                             .padding(.top, 30)
                             .preferredColorScheme(.dark)
                             .autocapitalization(.none)
@@ -107,7 +107,7 @@ struct SignInView: View {
                             
                         }
                         .padding(20)
-                        .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 4))
+                        .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 3))
                         .padding(.top, 20)
                         
                         //Forget password text

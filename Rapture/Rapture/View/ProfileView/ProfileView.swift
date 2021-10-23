@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var selection = 0
     @StateObject var profileService = ProfileService()
     @ObservedObject var mainService = MainService()
+    @State var isLinkActive = false
     
     var columns = [GridItem(.flexible(minimum: 120), spacing: 0),
                    GridItem(.flexible(minimum: 120), spacing: 0)]

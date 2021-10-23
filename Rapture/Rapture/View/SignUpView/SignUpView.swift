@@ -93,7 +93,7 @@ struct SignUpView: View {
                                 .foregroundColor(.white)
                                 .padding(20)
                                 .foregroundColor(.white)
-                                .background(RoundedRectangle(cornerRadius: 12).stroke(self.username != "" ? Color("Red") : self.color, lineWidth: 4))
+                                .background(RoundedRectangle(cornerRadius: 12).stroke(self.username != "" ? Color("Red") : self.color, lineWidth: 3))
                                 .padding(.top, 00)
                                 .preferredColorScheme(.dark)
                                 .autocapitalization(.none)
@@ -104,7 +104,7 @@ struct SignUpView: View {
                                 .foregroundColor(.white)
                                 .padding(20)
                                 .foregroundColor(.white)
-                                .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 4))
+                                .background(RoundedRectangle(cornerRadius: 12).stroke(self.email != "" ? Color("Red") : self.color, lineWidth: 3))
                                 .padding(.top, 20)
                                 .preferredColorScheme(.dark)
                                 .autocapitalization(.none)
@@ -139,7 +139,7 @@ struct SignUpView: View {
                                 
                             }
                             .padding(20)
-                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 4))
+                            .background(RoundedRectangle(cornerRadius: 12).stroke(self.password != "" ? Color("Red") : self.color, lineWidth: 3))
                             .padding(.top, 20)
                             
                             Button(action: {
