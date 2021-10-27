@@ -52,7 +52,7 @@ struct ProfileHeader: View {
                         .foregroundColor(Color("White"))
                         .frame(width: UIScreen.main.bounds.width - 60)
                     
-                    Text(session.session?.bio ?? "")
+                    Text(user!.bio)
                         .font(Font.custom("Gilroy-Bold", size: 20))
                         .foregroundColor(.white)
                         .padding(.top, 10)
