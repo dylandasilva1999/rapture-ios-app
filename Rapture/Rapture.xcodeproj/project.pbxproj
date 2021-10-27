@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		001B552835857155C9E31AE4 /* Pods_Rapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */; };
+		5707CB9627298BDE0001C4AB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5707CB7E27298BBA0001C4AB /* WidgetKit.framework */; };
+		5707CB9727298BDE0001C4AB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5707CB8027298BBA0001C4AB /* SwiftUI.framework */; };
+		5707CB9A27298BDE0001C4AB /* QuickPostWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707CB9927298BDE0001C4AB /* QuickPostWidget.swift */; };
+		5707CB9D27298BDF0001C4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5707CB9C27298BDF0001C4AB /* Assets.xcassets */; };
+		5707CB9F27298BDF0001C4AB /* QuickPostWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5707CB9B27298BDE0001C4AB /* QuickPostWidget.intentdefinition */; };
+		5707CBA027298BDF0001C4AB /* QuickPostWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5707CB9B27298BDE0001C4AB /* QuickPostWidget.intentdefinition */; };
+		5707CBA327298BDF0001C4AB /* QuickPostWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5707CB9527298BDE0001C4AB /* QuickPostWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		57289F76270E383B001D4CD7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289F75270E383B001D4CD7 /* ImagePicker.swift */; };
 		57289F7E270F0A6E001D4CD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289F7D270F0A6E001D4CD7 /* AuthService.swift */; };
 		57289F80270F0A87001D4CD7 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289F7F270F0A87001D4CD7 /* StorageService.swift */; };
@@ -57,7 +64,39 @@
 		57CC0FCF2704FD1900D853CC /* OffsetPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC0FCE2704FD1900D853CC /* OffsetPageTabView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5707CBA127298BDF0001C4AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5798A94326FB829C00337D7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5707CB9427298BDE0001C4AB;
+			remoteInfo = QuickPostWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5707CB7527298B260001C4AB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5707CBA327298BDF0001C4AB /* QuickPostWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5707CB6927298B260001C4AB /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		5707CB7E27298BBA0001C4AB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5707CB8027298BBA0001C4AB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5707CB9527298BDE0001C4AB /* QuickPostWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickPostWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5707CB9927298BDE0001C4AB /* QuickPostWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPostWidget.swift; sourceTree = "<group>"; };
+		5707CB9B27298BDE0001C4AB /* QuickPostWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QuickPostWidget.intentdefinition; sourceTree = "<group>"; };
+		5707CB9C27298BDF0001C4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5707CB9E27298BDF0001C4AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57289F75270E383B001D4CD7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		57289F7D270F0A6E001D4CD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		57289F7F270F0A87001D4CD7 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -113,6 +152,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5707CB9227298BDE0001C4AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5707CB9727298BDE0001C4AB /* SwiftUI.framework in Frameworks */,
+				5707CB9627298BDE0001C4AB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5798A94826FB829C00337D7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,8 +185,22 @@
 			isa = PBXGroup;
 			children = (
 				ABF9B8B6F37E51E4AF6C80A2 /* Pods_Rapture.framework */,
+				5707CB6927298B260001C4AB /* AuthenticationServices.framework */,
+				5707CB7E27298BBA0001C4AB /* WidgetKit.framework */,
+				5707CB8027298BBA0001C4AB /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5707CB9827298BDE0001C4AB /* QuickPostWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5707CB9927298BDE0001C4AB /* QuickPostWidget.swift */,
+				5707CB9B27298BDE0001C4AB /* QuickPostWidget.intentdefinition */,
+				5707CB9C27298BDF0001C4AB /* Assets.xcassets */,
+				5707CB9E27298BDF0001C4AB /* Info.plist */,
+			);
+			path = QuickPostWidget;
 			sourceTree = "<group>";
 		};
 		57289F6E270E354B001D4CD7 /* ViewModel */ = {
@@ -295,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				5798A94D26FB829C00337D7F /* Rapture */,
+				5707CB9827298BDE0001C4AB /* QuickPostWidget */,
 				5798A94C26FB829C00337D7F /* Products */,
 				271F30A86734DA766683CC9F /* Pods */,
 				4452C0953B0806DA09B6F8A9 /* Frameworks */,
@@ -305,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				5798A94B26FB829C00337D7F /* Rapture.app */,
+				5707CB9527298BDE0001C4AB /* QuickPostWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,6 +473,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5707CB9427298BDE0001C4AB /* QuickPostWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5707CBA427298BDF0001C4AB /* Build configuration list for PBXNativeTarget "QuickPostWidgetExtension" */;
+			buildPhases = (
+				5707CB9127298BDE0001C4AB /* Sources */,
+				5707CB9227298BDE0001C4AB /* Frameworks */,
+				5707CB9327298BDE0001C4AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickPostWidgetExtension;
+			productName = QuickPostWidgetExtension;
+			productReference = 5707CB9527298BDE0001C4AB /* QuickPostWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5798A94A26FB829C00337D7F /* Rapture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5798A95A26FB829D00337D7F /* Build configuration list for PBXNativeTarget "Rapture" */;
@@ -418,10 +499,12 @@
 				5798A94826FB829C00337D7F /* Frameworks */,
 				5798A94926FB829C00337D7F /* Resources */,
 				877CC4B17CB132BF685E2EFB /* [CP] Embed Pods Frameworks */,
+				5707CB7527298B260001C4AB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5707CBA227298BDF0001C4AB /* PBXTargetDependency */,
 			);
 			name = Rapture;
 			productName = Rapture;
@@ -434,9 +517,12 @@
 		5798A94326FB829C00337D7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					5707CB9427298BDE0001C4AB = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					5798A94A26FB829C00337D7F = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -456,11 +542,20 @@
 			projectRoot = "";
 			targets = (
 				5798A94A26FB829C00337D7F /* Rapture */,
+				5707CB9427298BDE0001C4AB /* QuickPostWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5707CB9327298BDE0001C4AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5707CB9D27298BDF0001C4AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5798A94926FB829C00337D7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,6 +616,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5707CB9127298BDE0001C4AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5707CB9F27298BDF0001C4AB /* QuickPostWidget.intentdefinition in Sources */,
+				5707CB9A27298BDE0001C4AB /* QuickPostWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5798A94726FB829C00337D7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +637,7 @@
 				57423506270526FA00BA2B23 /* SignInView.swift in Sources */,
 				5798A95126FB829C00337D7F /* ContentView.swift in Sources */,
 				57289F7E270F0A6E001D4CD7 /* AuthService.swift in Sources */,
+				5707CBA027298BDF0001C4AB /* QuickPostWidget.intentdefinition in Sources */,
 				57CC0FCF2704FD1900D853CC /* OffsetPageTabView.swift in Sources */,
 				57289F82270F1565001D4CD7 /* User.swift in Sources */,
 				575E8FE127062FD800C2D05A /* SignUpView.swift in Sources */,
@@ -569,7 +674,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5707CBA227298BDF0001C4AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5707CB9427298BDE0001C4AB /* QuickPostWidgetExtension */;
+			targetProxy = 5707CBA127298BDF0001C4AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5707CBA527298BDF0001C4AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NY29KDUYP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickPostWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickPostWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.Rapture.QuickPostWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5707CBA627298BDF0001C4AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NY29KDUYP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickPostWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickPostWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.Rapture.QuickPostWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5798A95826FB829D00337D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -690,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EAE4F06757ADD61CE52D221 /* Pods-Rapture.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -713,6 +885,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C929479D618B360CAA2E7059 /* Pods-Rapture.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -735,6 +908,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5707CBA427298BDF0001C4AB /* Build configuration list for PBXNativeTarget "QuickPostWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5707CBA527298BDF0001C4AB /* Debug */,
+				5707CBA627298BDF0001C4AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5798A94626FB829C00337D7F /* Build configuration list for PBXProject "Rapture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

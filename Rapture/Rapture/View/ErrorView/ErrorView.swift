@@ -17,7 +17,7 @@ struct ErrorView: View {
         GeometryReader{_ in
             VStack {
                 HStack {
-                    Text(self.error == "RESET" ? "Message" : "Error...")
+                    Text(self.error == "RESET" ? "Message" : "Oops...")
                         .font(Font.custom("Gilroy-Bold", size: 25))
                         .foregroundColor(Color("White"))
                     
