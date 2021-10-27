@@ -42,9 +42,60 @@ struct SimpleEntry: TimelineEntry {
 
 struct QuickPostWidgetEntryView : View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var widgetFamily
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack(alignment: .center) {
+            
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Rapture")
+                        .font(Font.custom("Gilroy-Bold", size: 18))
+                        .foregroundColor(.white)
+                        .padding(.leading, 20)
+                    
+                    Text("Upload New Post")
+                        .font(Font.custom("Gilroy-Regular", size: 12))
+                        .foregroundColor(.white)
+                        .padding(.leading, 20)
+                }
+
+                Spacer()
+            }
+            .padding(.top, 5)
+            
+            Divider()
+                .background(Color("Red"))
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+                .padding(.top, 5)
+            
+            HStack {
+                if widgetFamily == .systemSmall {
+                    Link(destination: URL(string: "widget://upload")!) {
+                        Image(systemName: "square.and.arrow.up")
+                            .font(.system(size: 22))
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.white)
+                            .background(Color("Red"))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .shadow(color: Color("Red").opacity(0.4), radius: 15)
+                    }
+                    
+                    Link(destination: URL(string: "widget://profile")!) {
+                        Image(systemName: "person")
+                            .font(.system(size: 22))
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.white)
+                            .background(Color("Red"))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .shadow(color: Color("Red").opacity(0.4), radius: 15)
+                    }
+                }
+            }
+            .padding(.top, 10)
+        }
     }
 }
 
@@ -55,6 +106,8 @@ struct QuickPostWidget: Widget {
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             QuickPostWidgetEntryView(entry: entry)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("WidgetBackground"))
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")

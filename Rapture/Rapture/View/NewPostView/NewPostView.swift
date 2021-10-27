@@ -21,6 +21,7 @@ struct NewPostView: View {
     @State var alert : Bool = false
     @State var error : String = ""
     @State var text = ""
+    @State var navigate = false
     
     var body: some View {
         ZStack {

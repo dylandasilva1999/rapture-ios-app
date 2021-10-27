@@ -28,6 +28,10 @@
 		5732403B27186E85000DA117 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732403A27186E85000DA117 /* PostCard.swift */; };
 		5742350227051B3A00BA2B23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742350127051B3A00BA2B23 /* HomeView.swift */; };
 		57423506270526FA00BA2B23 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423505270526FA00BA2B23 /* SignInView.swift */; };
+		5755D206272997DA00A3D575 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5755D202272997DA00A3D575 /* Gilroy-Bold.ttf */; };
+		5755D207272997DA00A3D575 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5755D203272997DA00A3D575 /* Gilroy-Regular.ttf */; };
+		5755D208272997DA00A3D575 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5755D204272997DA00A3D575 /* Gilroy-Light.ttf */; };
+		5755D209272997DA00A3D575 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5755D205272997DA00A3D575 /* Gilroy-SemiBold.ttf */; };
 		575C6F60271754F800D776E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F5F271754F800D776E8 /* ProfileView.swift */; };
 		575C6F632717556D00D776E8 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F622717556D00D776E8 /* NewPostView.swift */; };
 		575C6F66271755E700D776E8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C6F65271755E700D776E8 /* MainView.swift */; };
@@ -110,6 +114,10 @@
 		5732403A27186E85000DA117 /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		5742350127051B3A00BA2B23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		57423505270526FA00BA2B23 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		5755D202272997DA00A3D575 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Bold.ttf"; path = "Rapture/Fonts/Gilroy-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		5755D203272997DA00A3D575 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Regular.ttf"; path = "Rapture/Fonts/Gilroy-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		5755D204272997DA00A3D575 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Light.ttf"; path = "Rapture/Fonts/Gilroy-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		5755D205272997DA00A3D575 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-SemiBold.ttf"; path = "Rapture/Fonts/Gilroy-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
 		575C6F5F271754F800D776E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		575C6F622717556D00D776E8 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		575C6F65271755E700D776E8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 		5707CB9827298BDE0001C4AB /* QuickPostWidget */ = {
 			isa = PBXGroup;
 			children = (
+				5755D201272997B100A3D575 /* Fonts */,
 				5707CB9927298BDE0001C4AB /* QuickPostWidget.swift */,
 				5707CB9B27298BDE0001C4AB /* QuickPostWidget.intentdefinition */,
 				5707CB9C27298BDF0001C4AB /* Assets.xcassets */,
@@ -279,6 +288,17 @@
 				57423505270526FA00BA2B23 /* SignInView.swift */,
 			);
 			path = SignInView;
+			sourceTree = "<group>";
+		};
+		5755D201272997B100A3D575 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5755D202272997DA00A3D575 /* Gilroy-Bold.ttf */,
+				5755D204272997DA00A3D575 /* Gilroy-Light.ttf */,
+				5755D203272997DA00A3D575 /* Gilroy-Regular.ttf */,
+				5755D205272997DA00A3D575 /* Gilroy-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		575C6F5E271754E800D776E8 /* ProfileView */ = {
@@ -553,6 +573,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5707CB9D27298BDF0001C4AB /* Assets.xcassets in Resources */,
+				5755D207272997DA00A3D575 /* Gilroy-Regular.ttf in Resources */,
+				5755D206272997DA00A3D575 /* Gilroy-Bold.ttf in Resources */,
+				5755D209272997DA00A3D575 /* Gilroy-SemiBold.ttf in Resources */,
+				5755D208272997DA00A3D575 /* Gilroy-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

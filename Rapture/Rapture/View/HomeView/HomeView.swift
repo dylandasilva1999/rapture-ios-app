@@ -23,6 +23,7 @@ var tabs = ["pentagon.fill", "magnifyingglass", "plus", "person.fill"]
 
 struct CustomTabView: View {
     @State var selectedTab = "pentagon.fill"
+    @State var navigate = false
     @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
     
     var body: some View {
