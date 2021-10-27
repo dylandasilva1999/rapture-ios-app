@@ -153,7 +153,7 @@ struct EditProfileView: View {
                         .padding(.top, 40)
                         .shadow(color: Color("Red").opacity(0.4), radius: 15)
                         
-                        Text("Changes will be effected on next sign in.")
+                        Text("Changes will be effected after 2 seconds.")
                             .font(Font.custom("Gilroy-Regular", size: 18))
                             .foregroundColor(.white)
                             .padding(.vertical, 25)
