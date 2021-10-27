@@ -15,13 +15,16 @@ class MainService: ObservableObject {
     @Published var allPosts: [Post] = []
     
     func loadAllPosts() {
-        AuthService.storeRoot.collection("allposts").getDocuments{
+        AuthService.storeRoot.collection("allposts").order(by: "date").getDocuments{
             (querysnapshot, error) in
             
             if let error = error{
                 print(error)
             }else{
-                self.allPosts = querysnapshot!.documents.map{ (querydocument) -> Post in
+                
+                self.allPosts.sort(by: {$0.date > $1.date})
+                
+                self.allPosts = querysnapshot!.documents.reversed().map{ (querydocument) -> Post in
                     
                     let document = querydocument.data()
                     let caption = document["caption"] as? String ?? "No Caption Here"
