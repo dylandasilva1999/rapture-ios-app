@@ -6,6 +6,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Instagram][instagram-shield]][instagram-url]
+[![Behance][behance-shield]][behance-url]
 
 <h6 align="center">Dylan da Silva iOS 304</h6>
 <p align="center">
@@ -46,9 +48,15 @@
    * [Wireframes](#wireframes)
    * [User-flow](#user-flow)
 * [Development Process](#development-process)
-   * [Implementation](#implementation)
-* [Mockups](#mockups)
-* [Video Demonstration](#video-demonstration)
+   * [Implementation Process](#implementation-process)
+        * [Highlights](#highlights)
+        * [Challenges](#challenges)
+   * [Reviews and Testing](#feedback-from-reviews)
+        * [Feedback from Reviews](#feedback-from-reviews)
+   * [Future Implementation](#future-implementation)
+* [Final Outcome](#final-outcome)
+    * [Mockups](#mockups)
+    * [Video Demonstration](#video-demonstration)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -134,31 +142,55 @@ User-flow to be listed soon...
 
 The `Development Process` is the technical implementations and functionality done in the backend of the application.
 
-### Implementation
+### Implementation Process
+<!-- stipulate all of the functionality you included in the project -->
 
-#### Challenges
-
-Challenges to be listed soon...
+* Made use of both `functionality` to implement a specific feature.
+* `MVC/MVVM` design architecture implemented.
+* `Plugin` for this.
+* ETC.
 
 #### Highlights
+<!-- stipulated the highlight you experienced with the project -->
+* Sunshine.
+* Rainbows.
 
-Highlights to be listed soon...
+#### Challenges
+<!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
+* Bugs.
+* Bugs.
 
-#### Future Changes
+### Reviews & Testing
+<!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
 
-Future Changes to be listed soon...
+#### Feedback from Reviews
+
+`Peer Reviews` were conducted by my fellow students and lecturer. The following feedback I found useful:
+
+* Feedback one.
+* Feedback two.
+
+### Future Implementation
+<!-- stipulate functionality and improvements that can be implemented in the future. -->
+
+* Future 1.
+* Future 2.
 
 <!-- MOCKUPS -->
-## Mockups
+## Final Outcome
 
-<!--![image10][image10]-->
+### Mockups
+
+![image9][image9]
+<br>
+![image10][image10]
 
 <!-- VIDEO DEMONSTRATION -->
-## Video Demonstration
+### Video Demonstration
 
 To see a run through of the application, click below:
 
-[View Demo]()
+[View Demonstration](path/to/video/demonstration)
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -189,7 +221,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Dylan da Silva** - [@dylandasilva.designs](https://www.instagram.com/dylandasilva.designs/) - 190082@virtualwindow.co.za
+* **Dylan da Silva** - [@dylandasilva.designs](https://www.instagram.com/dylandasilva.designs/) - dylandasilva.b@gmail.com
 * **Project Link** - https://github.com/dylandasilva1999/rapture-ios-app
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -204,6 +236,10 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/dylan-da-silva-72b56a20a/
+[instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=flat-square&logo=instagram&colorB=555
+[instagram-url]: https://www.instagram.com/dylandasilva.designs/
+[behance-shield]: https://img.shields.io/badge/-Behance-black.svg?style=flat-square&logo=behance&colorB=555
+[behance-url]: https://www.behance.net/dylandasilva_
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [image1]: Images/Image1-new.png
