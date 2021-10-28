@@ -172,9 +172,6 @@ The `Conceptual Process` is the set of actions, activities and research that was
 ### Wireframes
 
 <!--![image11][image11]-->
-
-### User-flow
-
 <!--![image12][image12]-->
 
 <!-- DEVELOPMENT PROCESS -->
@@ -230,9 +227,7 @@ The `Reviews & Testing` was done through a video demonstration, and a google for
 
 ### Mockups
 
-<!--![image9][image9]-->
-<br>
-<!--![image10][image10]-->
+<!--![image13][image13]-->
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
@@ -302,4 +297,16 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [behance-url]: https://www.behance.net/dylandasilva_
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[image1]: Images/Image1-new.png
+[image1]: Images/Image1.png
+[image2]: Images/Image2.png
+[image3]: Images/Image3.png
+[image4]: Images/Image4.png
+[image5]: Images/Image5.png
+[image6]: Images/Image6.png
+[image7]: Images/Image7.png
+[image8]: Images/Image8.png
+[image9]: Images/Image9.png
+[image10]: Images/Image10.png
+[image11]: Images/Image11.png
+[image12]: Images/Image12.png
+[image13]: Images/Image13.jpg
