@@ -103,6 +103,14 @@ Requires iOS 13 and Xcode 11
 2. and paste in the repo's url:
 `https://github.com/dylandasilva1999/rapture-ios-app`
 
+Open in Xcode 11 or later.
+
+3. Install Cocoapods
+```sh
+cd your/directory
+pod install
+```
+
 <!-- FEATURES AND FUNCTIONALITY-->
 ## Features and Functionality
 
