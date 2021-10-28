@@ -57,6 +57,7 @@
 * [Final Outcome](#final-outcome)
     * [Mockups](#mockups)
     * [Video Demonstration](#video-demonstration)
+    * [Promotional Video](#promotional-video)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -239,6 +240,13 @@ The `Reviews & Testing` was done through a video demonstration, and a google for
 To see a run through of the application, click below:
 
 [View Demonstration](path/to/video/demonstration)
+
+<!-- PROMO VIDEO -->
+## Promotional Video
+
+To see the promotiomal video, click below:
+
+[View Promo Video](https://youtu.be/M8j41fDmdXQ)
 
 <!-- ROADMAP -->
 ## Roadmap
