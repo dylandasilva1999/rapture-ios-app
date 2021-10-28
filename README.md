@@ -67,7 +67,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 
-<!--![image1][image1]-->
+![image1][image1]
 
 ### Project Description
 
@@ -118,34 +118,34 @@ pod install
 ### Features
 
 #### Secure Firebase Authentication.
-<!--![image2][image2]-->
+![image2][image2]
 Secure log in and register and forget password.
 
 #### Social Feed.
-<!--![image3][image3]-->
+![image3][image3]
 Social feed to view all the posts made (ordered by latest).
 
 #### Like & Comment.
-<!--![image4][image4]-->
+![image4][image4]
 User can like and comment on a post.
 
 #### Make A Post.
 Make a post with a caption and image.
 
 #### Follow & Unfollow.
-<!--![image5][image5]-->
+![image5][image5]
 Follow or unfollow other users.
 
 #### Edit Profile Details.
-<!--![image6][image6]-->
+![image6][image6]
 Edit your profile information.
 
 #### View Other Profiles.
-<!--![image7][image7]-->
+![image7][image7]
 Search and view other users profiles and posts.
 
 #### Full Onboarding.
-<!--![image8][image8]-->
+![image8][image8]
 Onboarding when app is launched for first time.
 
 ### Functionality
@@ -166,13 +166,13 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-<!--![image9][image9]-->
-<!--![image10][image10]-->
+![image9][image9]
+![image10][image10]
 
 ### Wireframes
 
-<!--![image11][image11]-->
-<!--![image12][image12]-->
+![image11][image11]
+![image12][image12]
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -227,7 +227,7 @@ The `Reviews & Testing` was done through a video demonstration, and a google for
 
 ### Mockups
 
-<!--![image13][image13]-->
+![image13][image13]
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
