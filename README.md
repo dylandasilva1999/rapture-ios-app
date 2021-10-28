@@ -237,7 +237,7 @@ To see a run through of the application, click below:
 [View Demonstration](path/to/video/demonstration)
 
 <!-- PROMO VIDEO -->
-## Promotional Video
+### Promotional Video
 
 To see the promotiomal video, click below:
 
