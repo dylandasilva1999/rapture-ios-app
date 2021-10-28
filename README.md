@@ -92,7 +92,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Requires iOS 13 and Xcode 11
+Requires iOS 14 and Xcode 12
 
 ### Installation
 
@@ -103,7 +103,7 @@ Requires iOS 13 and Xcode 11
 2. and paste in the repo's url:
 `https://github.com/dylandasilva1999/rapture-ios-app`
 
-Open in Xcode 11 or later.
+Open in Xcode 12 or later.
 
 3. Install Cocoapods
 ```sh
@@ -116,12 +116,47 @@ pod install
 
 ### Features
 
+#### Secure Firebase Authentication.
 <!--![image2][image2]-->
-#### Features Coming Soon
+Secure log in and register and forget password.
+
+#### Social Feed.
+<!--![image3][image3]-->
+Social feed to view all the posts made (ordered by latest).
+
+#### Like & Comment.
+<!--![image4][image4]-->
+User can like and comment on a post.
+
+#### Make A Post.
+Make a post with a caption and image.
+
+#### Follow & Unfollow.
+<!--![image5][image5]-->
+Follow or unfollow other users.
+
+#### Edit Profile Details.
+<!--![image6][image6]-->
+Edit your profile information.
+
+#### View Other Profiles.
+<!--![image7][image7]-->
+Search and view other users profiles and posts.
+
+#### Full Onboarding.
+<!--![image8][image8]-->
+Onboarding when app is launched for first time.
 
 ### Functionality
 
-#### Functionality Coming Soon
+* `Firestore Database` for storing users, timeline, posts, following, followers, comments and all posts.
+* `Firebase Storage` for storing user profile images and posts.
+* `Firebase Authentication` for secure email & password log in (with forget password).
+* `iOS Widget` the open the Rapture application.
+* `Cocoapods` for dependency management.
+* `ScrollView`, `HStack, VStack`, `ZStack` were used for creating layouts.
+* `SDWebImageSwiftUI` framework for loading images for profile and posts.
+* `@EnviromentObjects`, `@State`, `@StateObject`, `@ObservedObject` for linking functions and files.
 
 <!-- CONCEPT PROCESS -->
 ## Concept Process
@@ -130,20 +165,16 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-Ideation to be listed soon...
-
-<!--![image6][image6]-->
-<!--![image7][image7]-->
+<!--![image9][image9]-->
+<!--![image10][image10]-->
 
 ### Wireframes
 
-<!--![image8][image8]-->
-Wireframes to be listed soon...
+<!--![image11][image11]-->
 
 ### User-flow
 
-<!--![image9][image9]-->
-User-flow to be listed soon...
+<!--![image12][image12]-->
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -153,45 +184,54 @@ The `Development Process` is the technical implementations and functionality don
 ### Implementation Process
 <!-- stipulate all of the functionality you included in the project -->
 
-* Made use of both `functionality` to implement a specific feature.
-* `MVC/MVVM` design architecture implemented.
-* `Plugin` for this.
-* ETC.
+#### Design Architecture
+
+`MVC` design architecture used for structuring the project.
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* Sunshine.
-* Rainbows.
+* One major highlight was getting the `Firebase database and storage` working 😅.
+* Adding the ability to `forget and reset` your password.
+* The `UI/UX design` following the gaming neon theme 🤩.
+* `Custom Validation` throughout Rapture.
+* Another highlight is adding the extra functionality of `commenting` on a post 👏.
+* The extra functionality of `following and unfollowing` a user.
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
+* Small bug where when the user has signed in and opens the application again, it displayes the sign in for split second first.
+* Minor bug where the onboarding page count is updated but does not move to the sign in screen.
+* `Uploading of images` and `updating profile` information.
 
 ### Reviews & Testing
-<!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
+
+The `Reviews & Testing` was done through a video demonstration, and a google form with questions related to the application.
 
 #### Feedback from Reviews
 
 `Peer Reviews` were conducted by my fellow students and lecturer. The following feedback I found useful:
 
-* Feedback one.
-* Feedback two.
+* "Very cool and badass, I like the dark theme and its very suitable to gamers".
+* "The theme is cohesive and fits well in the scope of the project".
+* "Feeds are accessible and well thought out and well designed. The layout makes sense in the theme of the app".
+* "The ability to switch between grid and single view is a nice feature for the feed. Everything else looks nice and seems to work as it should".
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* Add the ability to use the `camera` 📷 for post and profile images.
+* Navigate to a user profile via the social feed by clicking on the profile image.
+* `Upload of more than one image` for a post, and `video` uploads.
+* `Gaming News` section within the application.
 
 <!-- MOCKUPS -->
 ## Final Outcome
 
 ### Mockups
 
-![image9][image9]
+<!--![image9][image9]-->
 <br>
-![image10][image10]
+<!--![image10][image10]-->
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
@@ -238,6 +278,10 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [My lecturer Armand Pretorius](https://github.com/ArmandPretorius)
 * [Forbes Article](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=1715e64d8f3a)
 * [ScaleTech Article](https://scaletech.medium.com/is-online-gaming-the-new-social-media-in-2021-95890ff90bf8)
+* [Youtube Tutorial](https://www.youtube.com/watch?v=fgDZIEwqJXw&list=PLdBY1aYxSpPVI3wTlK1cKHNOoq4JA3X5-)
+* [Custom Fonts](https://www.simpleswiftguide.com/how-to-use-custom-fonts-in-swift-ios-app-using-swiftui/)
+* [Sign In & Sign Up](https://www.youtube.com/watch?v=GiCTgsH0dtk&t=715s)
+* [Neon Effect](https://www.hackingwithswift.com/plus/swiftui-special-effects/shadows-and-glows)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!--[image1]: Images/Image1.png-->
