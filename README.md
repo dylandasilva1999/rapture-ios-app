@@ -6,6 +6,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dylandasilva1999/rapture-ios-app?color=%23DE0E30)
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Instagram][instagram-shield]][instagram-url]
+[![Behance][behance-shield]][behance-url]
 
 <h6 align="center">Dylan da Silva iOS 304</h6>
 <p align="center">
@@ -46,9 +48,16 @@
    * [Wireframes](#wireframes)
    * [User-flow](#user-flow)
 * [Development Process](#development-process)
-   * [Implementation](#implementation)
-* [Mockups](#mockups)
-* [Video Demonstration](#video-demonstration)
+   * [Implementation Process](#implementation-process)
+        * [Highlights](#highlights)
+        * [Challenges](#challenges)
+   * [Reviews and Testing](#feedback-from-reviews)
+        * [Feedback from Reviews](#feedback-from-reviews)
+   * [Future Implementation](#future-implementation)
+* [Final Outcome](#final-outcome)
+    * [Mockups](#mockups)
+    * [Video Demonstration](#video-demonstration)
+    * [Promotional Video](#promotional-video)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -84,7 +93,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Requires iOS 13 and Xcode 11
+Requires iOS 14 and Xcode 12
 
 ### Installation
 
@@ -95,17 +104,60 @@ Requires iOS 13 and Xcode 11
 2. and paste in the repo's url:
 `https://github.com/dylandasilva1999/rapture-ios-app`
 
+Open in Xcode 12 or later.
+
+3. Install Cocoapods
+```sh
+cd your/directory
+pod install
+```
+
 <!-- FEATURES AND FUNCTIONALITY-->
 ## Features and Functionality
 
 ### Features
 
+#### Secure Firebase Authentication.
 <!--![image2][image2]-->
-#### Features Coming Soon
+Secure log in and register and forget password.
+
+#### Social Feed.
+<!--![image3][image3]-->
+Social feed to view all the posts made (ordered by latest).
+
+#### Like & Comment.
+<!--![image4][image4]-->
+User can like and comment on a post.
+
+#### Make A Post.
+Make a post with a caption and image.
+
+#### Follow & Unfollow.
+<!--![image5][image5]-->
+Follow or unfollow other users.
+
+#### Edit Profile Details.
+<!--![image6][image6]-->
+Edit your profile information.
+
+#### View Other Profiles.
+<!--![image7][image7]-->
+Search and view other users profiles and posts.
+
+#### Full Onboarding.
+<!--![image8][image8]-->
+Onboarding when app is launched for first time.
 
 ### Functionality
 
-#### Functionality Coming Soon
+* `Firestore Database` for storing users, timeline, posts, following, followers, comments and all posts.
+* `Firebase Storage` for storing user profile images and posts.
+* `Firebase Authentication` for secure email & password log in (with forget password).
+* `iOS Widget` the open the Rapture application.
+* `Cocoapods` for dependency management.
+* `ScrollView`, `HStack, VStack`, `ZStack` were used for creating layouts.
+* `SDWebImageSwiftUI` framework for loading images for profile and posts.
+* `@EnviromentObjects`, `@State`, `@StateObject`, `@ObservedObject` for linking functions and files.
 
 <!-- CONCEPT PROCESS -->
 ## Concept Process
@@ -114,51 +166,82 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-Ideation to be listed soon...
-
-<!--![image6][image6]-->
-<!--![image7][image7]-->
+<!--![image9][image9]-->
+<!--![image10][image10]-->
 
 ### Wireframes
 
-<!--![image8][image8]-->
-Wireframes to be listed soon...
-
-### User-flow
-
-<!--![image9][image9]-->
-User-flow to be listed soon...
+<!--![image11][image11]-->
+<!--![image12][image12]-->
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the backend of the application.
 
-### Implementation
+### Implementation Process
+<!-- stipulate all of the functionality you included in the project -->
 
-#### Challenges
+#### Design Architecture
 
-Challenges to be listed soon...
+`MVC` design architecture used for structuring the project.
 
 #### Highlights
+<!-- stipulated the highlight you experienced with the project -->
+* One major highlight was getting the `Firebase database and storage` working 😅.
+* Adding the ability to `forget and reset` your password.
+* The `UI/UX design` following the gaming neon theme 🤩.
+* `Custom Validation` throughout Rapture.
+* Another highlight is adding the extra functionality of `commenting` on a post 👏.
+* The extra functionality of `following and unfollowing` a user.
 
-Highlights to be listed soon...
+#### Challenges
+<!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
+* Small bug where when the user has signed in and opens the application again, it displayes the sign in for split second first.
+* Minor bug where the onboarding page count is updated but does not move to the sign in screen.
+* `Uploading of images` and `updating profile` information.
 
-#### Future Changes
+### Reviews & Testing
 
-Future Changes to be listed soon...
+The `Reviews & Testing` was done through a video demonstration, and a google form with questions related to the application.
+
+#### Feedback from Reviews
+
+`Peer Reviews` were conducted by my fellow students and lecturer. The following feedback I found useful:
+
+* "Very cool and badass, I like the dark theme and its very suitable to gamers".
+* "The theme is cohesive and fits well in the scope of the project".
+* "Feeds are accessible and well thought out and well designed. The layout makes sense in the theme of the app".
+* "The ability to switch between grid and single view is a nice feature for the feed. Everything else looks nice and seems to work as it should".
+
+### Future Implementation
+<!-- stipulate functionality and improvements that can be implemented in the future. -->
+
+* Add the ability to use the `camera` 📷 for post and profile images.
+* Navigate to a user profile via the social feed by clicking on the profile image.
+* `Upload of more than one image` for a post, and `video` uploads.
+* `Gaming News` section within the application.
 
 <!-- MOCKUPS -->
-## Mockups
+## Final Outcome
 
-<!--![image10][image10]-->
+### Mockups
+
+<!--![image13][image13]-->
 
 <!-- VIDEO DEMONSTRATION -->
-## Video Demonstration
+### Video Demonstration
 
 To see a run through of the application, click below:
 
-[View Demo]()
+[View Demonstration](path/to/video/demonstration)
+
+<!-- PROMO VIDEO -->
+## Promotional Video
+
+To see the promotiomal video, click below:
+
+[View Promo Video](https://youtu.be/M8j41fDmdXQ)
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -189,7 +272,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Dylan da Silva** - [@dylandasilva.designs](https://www.instagram.com/dylandasilva.designs/) - 190082@virtualwindow.co.za
+* **Dylan da Silva** - [@dylandasilva.designs](https://www.instagram.com/dylandasilva.designs/) - dylandasilva.b@gmail.com
 * **Project Link** - https://github.com/dylandasilva1999/rapture-ios-app
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -198,12 +281,32 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [My lecturer Armand Pretorius](https://github.com/ArmandPretorius)
 * [Forbes Article](https://www.forbes.com/sites/forbesbusinesscouncil/2021/03/16/why-the-gaming-industry-could-be-the-new-social-media/?sh=1715e64d8f3a)
 * [ScaleTech Article](https://scaletech.medium.com/is-online-gaming-the-new-social-media-in-2021-95890ff90bf8)
+* [Youtube Tutorial](https://www.youtube.com/watch?v=fgDZIEwqJXw&list=PLdBY1aYxSpPVI3wTlK1cKHNOoq4JA3X5-)
+* [Custom Fonts](https://www.simpleswiftguide.com/how-to-use-custom-fonts-in-swift-ios-app-using-swiftui/)
+* [Sign In & Sign Up](https://www.youtube.com/watch?v=GiCTgsH0dtk&t=715s)
+* [Neon Effect](https://www.hackingwithswift.com/plus/swiftui-special-effects/shadows-and-glows)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!--[image1]: Images/Image1.png-->
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/dylan-da-silva-72b56a20a/
+[instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=flat-square&logo=instagram&colorB=555
+[instagram-url]: https://www.instagram.com/dylandasilva.designs/
+[behance-shield]: https://img.shields.io/badge/-Behance-black.svg?style=flat-square&logo=behance&colorB=555
+[behance-url]: https://www.behance.net/dylandasilva_
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[image1]: Images/Image1-new.png
+[image1]: Images/Image1.png
+[image2]: Images/Image2.png
+[image3]: Images/Image3.png
+[image4]: Images/Image4.png
+[image5]: Images/Image5.png
+[image6]: Images/Image6.png
+[image7]: Images/Image7.png
+[image8]: Images/Image8.png
+[image9]: Images/Image9.png
+[image10]: Images/Image10.png
+[image11]: Images/Image11.png
+[image12]: Images/Image12.png
+[image13]: Images/Image13.jpg
